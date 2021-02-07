@@ -21,11 +21,14 @@
         <div class="card">
           <div class="card-body">
 
-            <h5 class="card-title">Página del plugin</h5>
+            <h5 class="card-title">ID del Producto Personalizado</h5>
 
               <div class="mb-3">
                 <label for="cn_pagina" class="form-label">Valor:</label>
-                <input type="text" class="form-control" id="cn_pagina" name="cn_pagina" value="<?php echo esc_html($cn_pagina);?>" required/>
+                <!--
+                  <input type="text" class="form-control" id="cn_pagina" name="cn_pagina" value="<?php echo esc_html($cn_pagina);?>" required/>
+                -->
+                <input type="number" class="form-control" id="cn_id_producto_personalizado" name="cn_id_producto_personalizado" value="<?php echo esc_html($cn_id_producto_personalizado);?>" required/>
 
               </div>
 

@@ -38,6 +38,10 @@ function cn_set_default_options() {
 
     // Revisar si ya se habia activado antes
 
+    if ( get_option( 'cn_id_producto_personalizado' ) === false ) {
+        add_option( 'cn_id_producto_personalizado', '0' );
+    }
+
     if ( get_option( 'cn_pagina' ) === false ) {
         add_option( 'cn_pagina', 'Ninguna' );
     }
@@ -111,6 +115,7 @@ add_action( 'admin_menu', 'cn_menu_ajustes' );
 function cn_genera_pagina() {
 
   // Conseguir el valor del Precio base de todos los elementos:
+  $cn_id_producto_personalizado   = get_option( 'cn_id_producto_personalizado' ) ;
   $cn_pagina                      = get_option( 'cn_pagina' ) ;
   $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
   $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
@@ -141,6 +146,7 @@ function cn_guardar_ga() {
     check_admin_referer( 'token_ga' );
 
     //Limpiar valor, para prevenir problemas de seguridad
+    $cn_id_producto_personalizado   = sanitize_text_field( $_POST['cn_id_producto_personalizado'] );
     $cn_pagina                      = sanitize_text_field( $_POST['cn_pagina'] );
     $cn_precio_base                 = sanitize_text_field( $_POST['cn_precio_base'] );
     $cn_precio_dimmer               = sanitize_text_field( $_POST['cn_precio_dimmer'] );
@@ -157,6 +163,7 @@ function cn_guardar_ga() {
     $cn_precio_4872                 = sanitize_text_field( $_POST['cn_precio_4872'] );
 
     // Guardar en la base de datos
+    update_option( 'cn_id_producto_personalizado', $cn_id_producto_personalizado );
     update_option( 'cn_pagina', $cn_pagina );
     update_option( 'cn_precio_base', $cn_precio_base );
     update_option( 'cn_precio_dimmer', $cn_precio_dimmer );
@@ -223,6 +230,7 @@ function cn_agregar_anuncio ( $the_content ) {
 
 
       // Conseguir el valor del Precio base de todos los elementos:
+      $cn_id_producto_personalizado   = get_option( 'cn_id_producto_personalizado' ) ;
       $cn_pagina                      = get_option( 'cn_pagina' ) ;
       $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
       $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
@@ -319,11 +327,16 @@ function jnj_mi_funcion()
  * Output engraving field.
  */
 function iconic_output_engraving_field() {
-  global $product;
 
-  if ( $product->get_id() !== 11 ) {
-    return;
-  }
+      global $product;
+
+      $cn_id_producto_personalizado = get_option( 'cn_id_producto_personalizado' ) ;
+
+      //echo $cn_id_producto_personalizado; die();
+
+      if ( $product->get_id() != $cn_id_producto_personalizado ) {
+        return;
+      }
 
       // Conseguir el valor del Precio base de todos los elementos:
       $cn_pagina                      = get_option( 'cn_pagina' ) ;
@@ -354,11 +367,16 @@ add_action( 'woocommerce_before_single_product_summary', 'iconic_output_engravin
  * Output engraving field.
  */
 function campos_ocultos_customizerNeon() {
-  global $product;
 
-  if ( $product->get_id() !== 11 ) {
-    return;
-  }
+      global $product;
+
+      $cn_id_producto_personalizado = get_option( 'cn_id_producto_personalizado' ) ;
+
+      //echo $cn_id_producto_personalizado; die();
+
+      if ( $product->get_id() != $cn_id_producto_personalizado ) {
+        return;
+      }
 
   ?>
   <div class="iconic-engraving-field">
