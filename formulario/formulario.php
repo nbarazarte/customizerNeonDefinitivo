@@ -18,6 +18,7 @@
         
         <h1>
           <small class="text-muted"> <strong> <?php echo esc_html($cn_precio_base);?>&euro;<strong></small>
+            <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="0.00" readonly="yes">
         </h1>
         <div style="font-size: 10px; color: #870D00"> IVA incluido</div>
         <div style="font-size: 10px;"> ENVÍO GRATUITO</div>
@@ -32,10 +33,17 @@
       
       <div class="col-12 text-center">
 
+      <!--
         <button id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn"> 
           <i class="fas fa-magic"></i> 
           Aplicar cambios
         </button>
+       -->
+<!--
+        <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+          <i class="fas fa-magic"></i> 
+          Aplicar cambios
+        </a>
 
        <div id="myDIV">
 
@@ -65,7 +73,7 @@
          
         </div>
       </div>        
-
+-->
       </div>
 
       <br/>

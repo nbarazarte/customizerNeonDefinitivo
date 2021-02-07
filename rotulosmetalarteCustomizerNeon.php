@@ -183,7 +183,7 @@ function cn_guardar_ga() {
     );
     exit;
 }
-
+/*
 //Crear un filtro para modificar el contenido del articulo....
 add_filter( 'the_content', 'cn_agregar_anuncio' );
 
@@ -248,7 +248,7 @@ function cn_agregar_anuncio ( $the_content ) {
     return;
 
     wp_die();
-}
+}*/
 
 add_action('wp_ajax_jnjtest', 'jnj_mi_funcion');
 add_action('wp_ajax_nopriv_jnjtest', 'jnj_mi_funcion');
@@ -272,7 +272,8 @@ function jnj_mi_funcion()
 
     //echo '<pre>'.print_r($res).'</pre><br/>';
     //echo "Precio Base: ".$res['cn_precio_base']."<br/>";
-      
+     
+    //Éste cálculo también lo hago en custom.js en la función de ajax:  
     $traseraNeon      = $_POST['anchocm'] * $_POST['alto'] * $_POST['trasera'];
     $sujecionNeon     = $_POST['sujecionNeon'];
     $dimmerNeon       = $_POST['dimmerNeon'];
@@ -281,21 +282,24 @@ function jnj_mi_funcion()
     $precio      = $traseraNeon + $sujecionNeon + $dimmerNeon + $tiemposEntrega;
     $precioFinal = $precio * 3.5;
 
-    echo "<b>Fuente de Letra: </b>". $_POST['fuenteLetrasText']."<br/>";
-    echo "<b>Ancho:</b> ". number_format($_POST['anchocm'],2,",",".")." cm <br/>";
-    echo "<b>Alto:</b> ".$_POST['alto']." cm <br/>";
-    echo "<b>Trasera del Neon:</b> ".$_POST['tipoTrasera']." ".number_format($traseraNeon,2,",",".")."&euro;<br/>";
-    echo "<b>Sujeción del Neon:</b> ".$_POST['tipoSujecion']." ".number_format($_POST['sujecionNeon'],2,",",".")."&euro;<br/>";
-    echo "<b>Dimmer (controlador de luz):</b> ".number_format($_POST['dimmerNeon'],2,",",".")."&euro;<br/>";
-    echo "<b>Tiempo de Entrega:</b> ".$_POST['tiemposEntregaText']." ".number_format($_POST['tiemposEntrega'],2,",",".")."&euro;<br/>";
-    echo "<b>Forma del Contorno: </b>". $_POST['contorno']."<br/>";
-    echo "<b>Color: </b>". $_POST['color']."<br/>";
+    /*
+      echo "<b>Fuente de Letra: </b>". $_POST['fuenteLetrasText']."<br/>";
+      echo "<b>Ancho:</b> ". number_format($_POST['anchocm'],2,",",".")." cm <br/>";
+      echo "<b>Alto:</b> ".$_POST['alto']." cm <br/>";
+      echo "<b>Trasera del Neon:</b> ".$_POST['tipoTrasera']." ".number_format($traseraNeon,2,",",".")."&euro;<br/>";
+      echo "<b>Sujeción del Neon:</b> ".$_POST['tipoSujecion']." ".number_format($_POST['sujecionNeon'],2,",",".")."&euro;<br/>";
+      echo "<b>Dimmer (controlador de luz):</b> ".number_format($_POST['dimmerNeon'],2,",",".")."&euro;<br/>";
+      echo "<b>Tiempo de Entrega:</b> ".$_POST['tiemposEntregaText']." ".number_format($_POST['tiemposEntrega'],2,",",".")."&euro;<br/>";
+      echo "<b>Forma del Contorno: </b>". $_POST['contorno']."<br/>";
+      echo "<b>Color: </b>". $_POST['color']."<br/>";
+    */
 
     $fuente = $_POST['fuenteLetras'];
     $color = $_POST['color'];
 
     echo '<h1>
       <small class="text-muted"> <strong>'. number_format($precioFinal,2,",","."). '&euro;<strong></small>
+      
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
     <div style="font-size: 10px;">ENVÍO GRATUITO</div>';
@@ -307,4 +311,274 @@ function jnj_mi_funcion()
           </div>';  
 
   wp_die();
+}
+
+
+//Aqui se muestra el formulario de personalización del rotulo de neon:
+/**
+ * Output engraving field.
+ */
+function iconic_output_engraving_field() {
+  global $product;
+
+  if ( $product->get_id() !== 11 ) {
+    return;
+  }
+
+      // Conseguir el valor del Precio base de todos los elementos:
+      $cn_pagina                      = get_option( 'cn_pagina' ) ;
+      $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
+      $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
+      $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
+      $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
+      $cn_precio_pvc                  = get_option( 'cn_precio_pvc' ) ;
+      $cn_precio_contraenchapado      = get_option( 'cn_precio_contraenchapado' ) ;
+      $cn_precio_maderadepino         = get_option( 'cn_precio_maderadepino' ) ;
+      $cn_precio_ancladoalapared      = get_option( 'cn_precio_ancladoalapared' ) ;
+      $cn_precio_colgadoaltecho       = get_option( 'cn_precio_colgadoaltecho' ) ;
+      $cn_precio_colgadocomouncuadro  = get_option( 'cn_precio_colgadocomouncuadro' ) ;
+      $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
+      $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
+      $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
+
+      require('formularioCustomizer.php');
+
+}
+
+add_action( 'woocommerce_before_single_product_summary', 'iconic_output_engraving_field', 10 );
+//add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10 );
+
+
+//Aqui se muestran ocultos en el formulario del carrito los campos de personalización del rotulo de neon:
+/**
+ * Output engraving field.
+ */
+function campos_ocultos_customizerNeon() {
+  global $product;
+
+  if ( $product->get_id() !== 11 ) {
+    return;
+  }
+
+  ?>
+  <div class="iconic-engraving-field">
+
+        <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+          <i class="fas fa-magic"></i> 
+          Aplicar cambios
+        </a>
+
+       <div id="myDIV">
+
+        <div class="d-flex justify-content-center">
+
+          <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+         
+        </div>
+      </div>  
+
+
+
+
+        <br/><br/>
+
+    <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
+    <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">
+    <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="Axaxax W05 Regular" readonly="yes">
+    <input type="hidden" id="anchocm" name="anchocm" value="10" readonly="yes">
+    <input type="hidden" id="altocm" name="altocm" value="53.720" readonly="yes">
+    <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="metacrilato" readonly="yes">
+    <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="anclado a la pared" readonly="yes">   
+    <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="incluir" readonly="yes">
+    <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="7 días (laborales)" readonly="yes">
+    <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
+    <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">
+
+  </div>
+  <?php
+
+}
+
+//add_action( 'woocommerce_before_single_product_summary', 'iconic_output_engraving_field', 10 );
+add_action( 'woocommerce_before_add_to_cart_button', 'campos_ocultos_customizerNeon', 10 );
+
+
+/**
+ * Add engraving text to cart item.
+ *
+ * @param array $cart_item_data
+ * @param int   $product_id
+ * @param int   $variation_id
+ *
+ * @return array
+ */
+function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $variation_id ) {
+  
+  $precio_final_rotulo  = filter_input( INPUT_POST, 'precio_final_rotulo' );
+  $texto_rotulo         = filter_input( INPUT_POST, 'texto_rotulo' );
+  $fuenteLetrasText     = filter_input( INPUT_POST, 'fuenteLetrasText' );
+  $anchocm              = filter_input( INPUT_POST, 'anchocm' );
+  $altocm               = filter_input( INPUT_POST, 'altocm' );
+  $tipoTraseraSumario   = filter_input( INPUT_POST, 'tipoTraseraSumario' );
+  $tipoSujecionSumario  = filter_input( INPUT_POST, 'tipoSujecionSumario' );
+  $tipoDimmerSumario    = filter_input( INPUT_POST, 'tipoDimmerSumario' );  
+  $tiempoEntregaSumario = filter_input( INPUT_POST, 'tiempoEntregaSumario' ); 
+  $tipoContornoSumario  = filter_input( INPUT_POST, 'tipoContornoSumario'  ); 
+  $colorSumario         = filter_input( INPUT_POST, 'colorSumario'         );
+
+  if ( empty( $precio_final_rotulo ) ) {
+    return $cart_item_data;
+  }
+
+  $product = wc_get_product( $product_id );
+  $price = $product->get_price();
+  // extra pack checkbox
+  
+     
+  $cart_item_data['new_price'] = $price + $precio_final_rotulo;
+  
+  /*
+  echo "-->".$precio_final_rotulo;
+
+  echo "-->".$cart_item_data['new_price'];
+
+  echo "<br/>";
+
+  echo "-->".$engraving_text; die();
+
+  */
+
+  
+  $cart_item_data['texto_rotulo']         = $texto_rotulo;
+  $cart_item_data['fuenteLetrasText']     = $fuenteLetrasText;
+  $cart_item_data['anchocm']              = number_format($_POST['anchocm'],3,",",".");
+  $cart_item_data['altocm']               = $altocm;
+  $cart_item_data['tipoTraseraSumario']   = $tipoTraseraSumario;
+  $cart_item_data['tipoSujecionSumario']  = $tipoSujecionSumario;
+  $cart_item_data['tipoDimmerSumario']    = $tipoDimmerSumario;
+  $cart_item_data['tiempoEntregaSumario'] = $tiempoEntregaSumario;
+  $cart_item_data['tipoContornoSumario']  = $tipoContornoSumario;
+  $cart_item_data['colorSumario']  = $colorSumario;
+
+  return $cart_item_data;
+}
+
+add_filter( 'woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart_item', 10, 3 );
+
+
+/**
+ * Display engraving text in the cart.
+ *
+ * @param array $item_data
+ * @param array $cart_item
+ *
+ * @return array
+ */
+function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
+  if ( empty( $cart_item['texto_rotulo'] ) ) {
+    return $item_data;
+  }
+
+  $item_data[] = array(
+    'key'     => __( 'Texto rótulo', 'iconic' ),
+    'value'   => wc_clean( $cart_item['texto_rotulo'] ),
+    'display' => '',
+  ); 
+
+  $item_data[] = array(
+    'key'     => __( 'Fuente de letras', 'iconic' ),
+    'value'   => wc_clean( $cart_item['fuenteLetrasText'] ),
+    'display' => '',
+  );   
+
+  $item_data[] = array(
+    'key'     => __( 'Ancho (cm)', 'iconic' ),
+    'value'   => wc_clean( $cart_item['anchocm'] ),
+    'display' => '',
+  );
+
+  $item_data[] = array(
+    'key'     => __( 'Alto (cm)', 'iconic' ),
+    'value'   => wc_clean( $cart_item['altocm'] ),
+    'display' => '',
+  );  
+
+  $item_data[] = array(
+    'key'     => __( 'Trasera del Neon', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoTraseraSumario'] ),
+    'display' => '',
+  );
+
+  $item_data[] = array(
+    'key'     => __( 'Sujeción del Neon', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoSujecionSumario'] ),
+    'display' => '',
+  );
+
+  $item_data[] = array(
+    'key'     => __( 'Dimmer', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoDimmerSumario'] ),
+    'display' => '',
+  );     
+
+  $item_data[] = array(
+    'key'     => __( 'Tiempo de Entrega', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tiempoEntregaSumario'] ),
+    'display' => '',
+  ); 
+
+  $item_data[] = array(
+    'key'     => __( 'Forma del Contorno', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoContornoSumario'] ),
+    'display' => '',
+  );   
+ 
+   $item_data[] = array(
+    'key'     => __( 'Color', 'iconic' ),
+    'value'   => wc_clean( $cart_item['colorSumario'] ),
+    'display' => '',
+  ); 
+
+  return $item_data;
+}
+
+add_filter( 'woocommerce_get_item_data', 'iconic_display_engraving_text_cart', 10, 2 );
+
+
+add_action( 'woocommerce_before_calculate_totals', 'before_calculate_totals', 10, 1 );
+ 
+function before_calculate_totals( $cart_obj ) {
+
+  if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+    return;
+  }
+
+  // Iterate through each cart item
+  foreach( $cart_obj->get_cart() as $key=>$value ) {
+
+    if( isset( $value['new_price'] ) ) {
+      $price = $value['new_price'];
+      $value['data']->set_price( ( $price ) );
+    }
+  }
 }

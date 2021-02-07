@@ -97,6 +97,19 @@ function jQueryDoSomethingAJAX() {
         }
     }
 
+
+    var textoCorrecto;
+    switch (document.getElementById("tipoDimmer").value) {
+      case 'noincluir':
+        textoCorrecto = "no incluir";
+        break;
+
+        default:
+            textoCorrecto = document.getElementById("tipoDimmer").value;
+        break;
+    }
+
+    var tipoDimmer = textoCorrecto;
     var dimmerNeon = txt;       
 
     var colores = document.getElementsByName("colores");
@@ -166,6 +179,25 @@ function jQueryDoSomethingAJAX() {
         'tiemposEntregaText': tiemposEntregaText,
     };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     var protocolo = window.location.protocol;
     var hostname = window.location.hostname;
     var carpeta = window.location.pathname;
@@ -202,7 +234,26 @@ function jQueryDoSomethingAJAX() {
         }
        
         document.getElementById('response').innerHTML = response;
-       
+
+        //Calculo el precio del rótulo y lo envío al campo oculto en el formulario del carrito:
+        traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
+        sujecionNeon    = Number(sujecionNeon);
+        dimmerNeon      = Number(dimmerNeon);
+        tiemposEntrega  = Number(tiemposEntrega);
+        precio          = traseraNeon + sujecionNeon + dimmerNeon + tiemposEntrega;
+        precioFinal     = Number(precio) * 3.5;
+
+       document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
+       document.getElementById('texto_rotulo').value            = rotulo;
+       document.getElementById('fuenteLetrasText').value        = fuenteLetrasText;
+       document.getElementById('anchocm').value                 = anchocm;
+       document.getElementById('altocm').value                  = alto;
+       document.getElementById('tipoTraseraSumario').value      = tipoTrasera;
+       document.getElementById('tipoSujecionSumario').value     = tipoSujecion;
+       document.getElementById('tipoDimmerSumario').value       = tipoDimmer;
+       document.getElementById('tiempoEntregaSumario').value    = tiemposEntregaText;
+       document.getElementById('tipoContornoSumario').value     = contorno;
+       document.getElementById('colorSumario').value            = color;
     });
 
 }
