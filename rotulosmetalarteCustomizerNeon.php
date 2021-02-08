@@ -379,14 +379,18 @@ function campos_ocultos_customizerNeon() {
       }
 
   ?>
-  <div class="iconic-engraving-field">
 
-        <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
-          <i class="fas fa-magic"></i> 
-          Aplicar cambios
-        </a>
+  <div class="bsnamespace">
+    <div class="iconic-engraving-field">
+
+      <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+        <i class="fas fa-magic"></i> 
+        Aplicar cambios
+      </a>
 
        <div id="myDIV">
+
+        
 
         <div class="d-flex justify-content-center">
 
@@ -415,23 +419,21 @@ function campos_ocultos_customizerNeon() {
         </div>
       </div>  
 
+      <br/><br/>
 
+      <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
+      <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">
+      <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="Axaxax W05 Regular" readonly="yes">
+      <input type="hidden" id="anchocm" name="anchocm" value="10" readonly="yes">
+      <input type="hidden" id="altocm" name="altocm" value="53.720" readonly="yes">
+      <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="metacrilato" readonly="yes">
+      <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="anclado a la pared" readonly="yes">   
+      <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="condimmer" readonly="yes">
+      <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="7 días (laborales)" readonly="yes">
+      <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
+      <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">
 
-
-        <br/><br/>
-
-    <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
-    <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">
-    <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="Axaxax W05 Regular" readonly="yes">
-    <input type="hidden" id="anchocm" name="anchocm" value="10" readonly="yes">
-    <input type="hidden" id="altocm" name="altocm" value="53.720" readonly="yes">
-    <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="metacrilato" readonly="yes">
-    <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="anclado a la pared" readonly="yes">   
-    <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="condimmer" readonly="yes">
-    <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="7 días (laborales)" readonly="yes">
-    <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
-    <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">
-
+    </div>
   </div>
   <?php
 
