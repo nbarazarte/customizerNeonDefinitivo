@@ -100,8 +100,12 @@ function jQueryDoSomethingAJAX() {
 
     var textoCorrecto;
     switch (document.getElementById("tipoDimmer").value) {
-      case 'noincluir':
-        textoCorrecto = "no incluir";
+      case 'condimmer':
+        textoCorrecto = "con dimmer";
+        break;
+
+      case 'sindimmer':
+        textoCorrecto = "sin dimmer";
         break;
 
         default:

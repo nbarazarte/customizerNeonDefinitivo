@@ -427,7 +427,7 @@ function campos_ocultos_customizerNeon() {
     <input type="hidden" id="altocm" name="altocm" value="53.720" readonly="yes">
     <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="metacrilato" readonly="yes">
     <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="anclado a la pared" readonly="yes">   
-    <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="incluir" readonly="yes">
+    <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="condimmer" readonly="yes">
     <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="7 días (laborales)" readonly="yes">
     <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
     <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">

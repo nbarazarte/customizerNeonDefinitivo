@@ -2,7 +2,7 @@
 
   <div class="card-header">
     Dimmer (controlador de luz)
-    <input type="hidden" id="tipoDimmer" name="tipoDimmer" readonly="yes" value="incluir">
+    <input type="hidden" id="tipoDimmer" name="tipoDimmer" readonly="yes" value="condimmer">
   </div>
 
   <div class="card-body">
@@ -20,12 +20,12 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="incluir" value="<?php echo esc_html($cn_precio_dimmer);?>" checked>      
+                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="condimmer" value="<?php echo esc_html($cn_precio_dimmer);?>" checked>      
                 </div>
 
                 <div class="col-sm-12">
-                  <label class="form-check-label tamanoLetras" for="incluir">                    
-                    Incluir
+                  <label class="form-check-label tamanoLetras" for="condimmer">                    
+                    Con dimmer
                   </label>       
                 </div>      
 
@@ -41,12 +41,12 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="noincluir" value="0">      
+                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="sindimmer" value="0">      
                 </div>
 
                 <div class="col-sm-12">
-                  <label class="form-check-label tamanoLetras" for="noincluir">                    
-                    No incluir
+                  <label class="form-check-label tamanoLetras" for="sindimmer">                    
+                    Sin dimmer
                   </label>       
                 </div>      
 
