@@ -1,3 +1,9 @@
+//IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Para deshabiltar por defecto el boton de añadir al carrito
+//en la linea 249 de jQueryDoSomethingAJAX() se habilita nuevamente!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+if(document.getElementById('rotulo') !== null){
+    document.getElementsByName("add-to-cart")[0].style.visibility = 'hidden';    
+}
+
 function jQueryDoSomethingAJAX() {
     // Preparamos los parámetros para la petición..
     //var formulario = document.forms.namedItem("customizerNeon");
@@ -183,25 +189,6 @@ function jQueryDoSomethingAJAX() {
         'tiemposEntregaText': tiemposEntregaText,
     };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     var protocolo = window.location.protocol;
     var hostname = window.location.hostname;
     var carpeta = window.location.pathname;
@@ -222,8 +209,9 @@ function jQueryDoSomethingAJAX() {
     }
 
      //document.getElementById("myDIV").style.display = 'inline';
-     document.getElementById("myDIV").style.display = 'inline';
-     document.getElementById("myButton").style.display = 'none';
+     document.getElementById("myDIV").style.visibility = 'visible';
+
+     document.getElementById("myButton").style.visibility = 'hidden';
 
     // Hacemos la petición al endpoint de WordPress..
     jQuery.post(ruta, data, function (response) {
@@ -233,8 +221,9 @@ function jQueryDoSomethingAJAX() {
 
         if(response != null){
             //document.getElementById("myDIV").style.display = "none";
-            document.getElementById("myDIV").style.display = "none";
-            document.getElementById("myButton").style.display = "inline";
+            document.getElementById("myDIV").style.visibility = "hidden";
+            
+            document.getElementById("myButton").style.visibility = "visible";
         }
        
         document.getElementById('response').innerHTML = response;
@@ -258,6 +247,8 @@ function jQueryDoSomethingAJAX() {
        document.getElementById('tiempoEntregaSumario').value    = tiemposEntregaText;
        document.getElementById('tipoContornoSumario').value     = contorno;
        document.getElementById('colorSumario').value            = color;
+
+       document.getElementsByName("add-to-cart")[0].style.visibility = 'visible';
     });
 
 }

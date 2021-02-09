@@ -20,7 +20,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="condimmer" value="<?php echo esc_html($cn_precio_dimmer);?>" checked>      
+                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="condimmer" value="<?php echo esc_html($cn_precio_dimmer);?>" checked onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -41,7 +41,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="sindimmer" value="0">      
+                  <input onclick="textoRadio('tipoDimmer',this.id)" class="form-check-input" type="radio" name="dimmer" id="sindimmer" value="0" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">

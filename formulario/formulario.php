@@ -39,44 +39,17 @@
           Aplicar cambios
         </button>
        -->
-<!--
+
         <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
           <i class="fas fa-magic"></i> 
           Aplicar cambios
         </a>
 
-       <div id="myDIV">
+        <div id="myDIV">
+          <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
+        </div>        
 
-        <div class="d-flex justify-content-center">
-
-          <div class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-success" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-info" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-         
-        </div>
-      </div>        
--->
       </div>
-
-      <br/>
 
         <?php
 

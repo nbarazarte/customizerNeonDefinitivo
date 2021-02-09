@@ -19,7 +19,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="contornos" id="rectangular" value="rectangular" checked>      
+                  <input class="form-check-input" type="radio" name="contornos" id="rectangular" value="rectangular" checked onchange="jQueryDoSomethingAJAX()">        
                 </div>
 
                 <div class="col-sm-12">
@@ -40,7 +40,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="contornos" id="redondo" value="redondo">      
+                  <input class="form-check-input" type="radio" name="contornos" id="redondo" value="redondo" onchange="jQueryDoSomethingAJAX()">     
                 </div>
 
                 <div class="col-sm-12">
@@ -61,7 +61,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="contornos" id="personalizado" value="personalizado">      
+                  <input class="form-check-input" type="radio" name="contornos" id="personalizado" value="personalizado" onchange="jQueryDoSomethingAJAX()">       
                 </div>
 
                 <div class="col-sm-12">

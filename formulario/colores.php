@@ -19,7 +19,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="amarillo" checked>      
+                  <input class="form-check-input" type="radio" name="colores" value="amarillo" checked onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -40,7 +40,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="azul">      
+                  <input class="form-check-input" type="radio" name="colores" value="azul" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -61,7 +61,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="verde">      
+                  <input class="form-check-input" type="radio" name="colores" value="verde" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -82,7 +82,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="rojo">      
+                  <input class="form-check-input" type="radio" name="colores" value="rojo" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -103,7 +103,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="morado">      
+                  <input class="form-check-input" type="radio" name="colores" value="morado" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -124,7 +124,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="turquesa">      
+                  <input class="form-check-input" type="radio" name="colores" value="turquesa" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -146,7 +146,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="naranja">      
+                  <input class="form-check-input" type="radio" name="colores" value="naranja" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -167,7 +167,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input class="form-check-input" type="radio" name="colores" value="fucsia">      
+                  <input class="form-check-input" type="radio" name="colores" value="fucsia" onchange="jQueryDoSomethingAJAX()">      
                 </div>
 
                 <div class="col-sm-12">

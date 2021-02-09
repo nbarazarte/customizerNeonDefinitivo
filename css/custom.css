@@ -9288,7 +9288,12 @@
 
 
 
-
+#myDIV2 {
+  visibility: hidden
+  
+  /*visibility: hidden;*/
+  /*display: none;;*/
+}
 
 
 .tamanoLetras{
@@ -9296,18 +9301,18 @@
 }
 
 #myDIV {
-
-  display: none;
+  visibility: hidden
+  
   /*visibility: hidden;*/
-  /*visibility: hidden;*/
+  /*display: none;;*/
 }
 
 #myButton {
 
   /*display: none;*/
   /*visibility: hidden;*/
-  /*visibility: visible;*/
-  display: inline;
+  /*display: inline;*/
+  visibility: visible;
 }
 
 #myCanvas{

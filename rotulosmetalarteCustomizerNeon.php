@@ -380,46 +380,7 @@ function campos_ocultos_customizerNeon() {
 
   ?>
 
-  <div class="bsnamespace">
-    <div class="iconic-engraving-field">
-
-      <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
-        <i class="fas fa-magic"></i> 
-        Aplicar cambios
-      </a>
-
-       <div id="myDIV">
-
-        
-
-        <div class="d-flex justify-content-center">
-
-          <div class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-success" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-info" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <div class="spinner-grow text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-         
-        </div>
-      </div>  
-
-      <br/><br/>
+  <div class="bsnamespace"> 
 
       <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
       <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">
@@ -433,7 +394,6 @@ function campos_ocultos_customizerNeon() {
       <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
       <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">
 
-    </div>
   </div>
   <?php
 
