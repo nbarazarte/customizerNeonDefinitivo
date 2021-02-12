@@ -286,8 +286,8 @@ function jnj_mi_funcion()
     $sujecionNeon     = $_POST['sujecionNeon'];
     $dimmerNeon       = $_POST['dimmerNeon'];
     $tiemposEntrega   = $_POST['tiemposEntrega'];
- 
-    $precio      = $traseraNeon + $sujecionNeon + $dimmerNeon + $tiemposEntrega;
+    $precioNeon      = ($_POST['anchocm'] / 100) * 7;
+    $precio      = $precioNeon + $traseraNeon + $sujecionNeon + $dimmerNeon + $tiemposEntrega;
     $precioFinal = $precio * 3.5;
 
     /*
@@ -381,6 +381,32 @@ function campos_ocultos_customizerNeon() {
   ?>
 
   <div class="bsnamespace"> 
+
+
+      <div class="col-12 text-center">
+
+      <!--
+        <button id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn"> 
+          <i class="fas fa-magic"></i> 
+          Aplicar cambios
+        </button>
+       -->
+
+        <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+          <i class="fas fa-magic"></i> 
+          Aplicar cambios
+        </a>
+
+        <div id="myDIV">
+          <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
+        </div>        
+
+      </div>
+
+
+
+
+
 
       <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
       <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">

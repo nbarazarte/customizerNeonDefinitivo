@@ -66,7 +66,7 @@
 
                 <div class="col-sm-12">
                   <label class="form-check-label tamanoLetras" for="personalizado">                    
-                    Personalizado
+                    Personalizado con forma
                   </label>       
                 </div>      
 

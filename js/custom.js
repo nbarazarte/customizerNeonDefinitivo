@@ -233,8 +233,11 @@ function jQueryDoSomethingAJAX() {
         sujecionNeon    = Number(sujecionNeon);
         dimmerNeon      = Number(dimmerNeon);
         tiemposEntrega  = Number(tiemposEntrega);
-        precio          = traseraNeon + sujecionNeon + dimmerNeon + tiemposEntrega;
+        precioNeon      = (Number(anchocm) / 100) * 7;
+        //console.log(precioNeon);
+        precio          = precioNeon + traseraNeon + sujecionNeon + dimmerNeon + tiemposEntrega;
         precioFinal     = Number(precio) * 3.5;
+        //console.log(precioFinal);
 
        document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
        document.getElementById('texto_rotulo').value            = rotulo;

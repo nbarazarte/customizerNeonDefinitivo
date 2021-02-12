@@ -9323,19 +9323,318 @@
 
 /*Origenes de las fuentes:*/
 
-    @font-face{
-        font-family:"Axaxax W05 Regular";
-        src: url("Fonts/Axaxax/2d86daea-05b1-4a38-b3b1-37f23a85189b.woff2") format("woff2"),
-        	 url("Fonts/Axaxax/a5f5da94-f920-46e3-8b2c-b3f1122b7c93.woff") format("woff");
-    }
+  @font-face{
+    font-family:"Axaxax W05 Regular";
+    src: url("Fonts/Axaxax/2d86daea-05b1-4a38-b3b1-37f23a85189b.woff2") format("woff2"),
+       	 url("Fonts/Axaxax/a5f5da94-f920-46e3-8b2c-b3f1122b7c93.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
 
 	@font-face {
-	    font-family: 'neon_lightsregular';
-	    src: url('Fonts/NeonLights/neonlights-22d-webfont.woff2') format('woff2'),
-	         url('Fonts/NeonLights/neonlights-22d-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
+	  font-family: 'neon_lightsregular';
+	  src: url('Fonts/NeonLights/neonlights-22d-webfont.woff2') format('woff2'),
+	       url('Fonts/NeonLights/neonlights-22d-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo";
+    src: url("Fonts/Bulo/Bulo.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Black";
+    src: url("Fonts/Bulo/Bulo Black.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Black Italic";
+    src: url("Fonts/Bulo/Bulo Black Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Bold";
+    src: url("Fonts/Bulo/Bulo Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Bold Italic";
+    src: url("Fonts/Bulo/Bulo Bold Italic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo ExtraBlack";
+    src: url("Fonts/Bulo/Bulo ExtraBlack.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo ExtraBlack Italic";
+    src: url("Fonts/Bulo/Bulo ExtraBlack Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Hair Blond";
+    src: url("Fonts/Bulo/Bulo Hair Blond.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Hair Blond Italic";
+    src: url("Fonts/Bulo/Bulo Hair Blond Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Hair Blond Italic";
+    src: url("Fonts/Bulo/Bulo Hair Blond Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Hair Dark";
+    src: url("Fonts/Bulo/Bulo Hair Dark.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Hair Dark Italic";
+    src: url("Fonts/Bulo/Bulo Hair Dark Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }  
+
+  @font-face{
+    font-family:"Bulo Italic";
+    src: url("Fonts/Bulo/Bulo Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  } 
+
+  @font-face{
+    font-family:"Bulo Light";
+    src: url("Fonts/Bulo/Bulo Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  } 
+
+  @font-face{
+    font-family:"Bulo Light Italic";
+    src: url("Fonts/Bulo/Bulo Light Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  } 
+
+  @font-face{
+    font-family:"Bulo Medium";
+    src: url("Fonts/Bulo/Bulo Medium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }        
+
+  @font-face{
+    font-family:"Bulo Medium Italic";
+    src: url("Fonts/Bulo/Bulo Medium Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Thin";
+    src: url("Fonts/Bulo/Bulo Thin.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Bulo Thin Italic";
+    src: url("Fonts/Bulo/Bulo Thin Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face{
+    font-family:"Bulo Ultra Black";
+    src: url("Fonts/Bulo/Bulo Ultra Black.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  } 
+
+  @font-face{
+    font-family:"Bulo Ultra Black Italic";
+    src: url("Fonts/Bulo/Bulo Ultra Black Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }           
+
+  @font-face {
+    font-family: 'gruenewald_varegular';
+    src: url('Fonts/gruenewald_va/gruenewald_va_normal-webfont.woff2') format('woff2'),
+         url('Fonts/gruenewald_va/gruenewald_va_normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'neoncity_displayregular';
+    src: url('Fonts/kenzie-creativehand-neoncity/neoncitydisplay-mvvlv-webfont.woff2') format('woff2'),
+         url('Fonts/kenzie-creativehand-neoncity/neoncitydisplay-mvvlv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neoncity_scriptregular';
+    src: url('Fonts/kenzie-creativehand-neoncity/neoncityscript-k77je-webfont.woff2') format('woff2'),
+         url('Fonts/kenzie-creativehand-neoncity/neoncityscript-k77je-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'optisantitaregular';
+    src: url('Fonts/opti-santita/optisantita-webfont.woff2') format('woff2'),
+         url('Fonts/opti-santita/optisantita-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'signatura_monoline_scriptRg';
+    src: url('Fonts/signatura_monoline_script/signatura_monoline-webfont.woff2') format('woff2'),
+         url('Fonts/signatura_monoline_script/signatura_monoline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neoneon';
+    src: url('Fonts/neoneon/Neoneon.woff2') format('woff2'),
+         url('Fonts/neoneon/Neoneon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'arialbold';
+    src: url('Fonts/arial-sv/arialbd-webfont.woff2') format('woff2'),
+         url('Fonts/arial-sv/arialbd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'ArialCE';
+    src: url('Fonts/arial-sv/ArialCE.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialCE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialCEBold';
+    src: url('Fonts/arial-sv/ArialCEBold.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialCEBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialCEBoldItalic';
+    src: url('Fonts/arial-sv/ArialCEBoldItalic.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialCEBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'ArialCEItalic';
+    src: url('Fonts/arial-sv/ArialCEItalic.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialCEItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ArialCEMTBlack';
+    src: url('Fonts/arial-sv/ArialCEMTBlack.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialCEMTBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial_GEO';
+    src: url('Fonts/arial-sv/Arial_GEO.woff2') format('woff2'),
+         url('Fonts/arial-sv/Arial_GEO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ARI';
+    src: url('Fonts/arial-sv/ARI.woff2') format('woff2'),
+         url('Fonts/arial-sv/ARI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arialn';
+    src: url('Fonts/arial-sv/Arialn.woff2') format('woff2'),
+         url('Fonts/arial-sv/Arialn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arialnb';
+    src: url('Fonts/arial-sv/Arialnb.woff2') format('woff2'),
+         url('Fonts/arial-sv/Arialnb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialTh';
+    src: url('Fonts/arial-sv/ArialTh.woff2') format('woff2'),
+         url('Fonts/arial-sv/ArialTh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ariblk';
+    src: url('Fonts/arial-sv/ariblk.woff2') format('woff2'),
+         url('Fonts/arial-sv/ariblk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 /****************************************************************************************/
 
@@ -9368,6 +9667,8 @@
 
 .axaxax{
   font-family:"Axaxax W05 Regular";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .neon-lights{
@@ -9375,6 +9676,243 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.Bulo{
+  font-family:"Bulo";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Black{
+  font-family:"Bulo Black";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Black_Italic{
+  font-family:"Bulo Black Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Bold{
+  font-family:"Bulo Bold";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.Bulo_Bold_Italic{
+  font-family:"Bulo Bold Italic";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.Bulo_ExtraBlack{
+  font-family:"Bulo ExtraBlack";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_ExtraBlack_Italic{
+  font-family:"Bulo ExtraBlack Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Hair_Blond{
+  font-family:"Bulo Hair Blond";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Hair_Blond_Italic{
+  font-family:"Bulo Hair Blond Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Hair_Dark{
+  font-family:"Bulo Hair Dark";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Hair_Dark_Italic{
+  font-family:"Bulo Hair Dark Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Hair_Italic{
+  font-family:"Bulo Hair Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+              
+.Bulo_Italic{
+  font-family:"Bulo Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Light{
+  font-family:"Bulo Light";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Light_Italic{
+  font-family:"Bulo Light Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Medium{
+  font-family:"Bulo Medium";
+  font-weight: normal;
+  font-style: normal;
+}
+                
+.Bulo_Medium_Italic{
+  font-family:"Bulo Medium Italic";
+  font-weight: normal;
+  font-style: italic;
+}              
+          
+.Bulo_Thin{
+  font-family:"Bulo Thin";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Thin_Italic{
+  font-family:"Bulo Thin Italic";
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Bulo_Ultra_Black{
+  font-family:"Bulo Ultra Black";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Bulo_Ultra_Black_Italic {
+  font-family:"Bulo Ultra Black Italic";
+  font-weight: normal;
+  font-style: italic;
+}     
+
+.gruenewald_varegular {
+  font-family:"gruenewald_varegular";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.neoncity_displayregular {
+  font-family:"neoncity_displayregular";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.neoncity_scriptregular {
+  font-family:"neoncity_scriptregular";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.optisantitaregular {
+  font-family:"optisantitaregular";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.signatura_monoline_scriptRg {
+  font-family:"signatura_monoline_scriptRg";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.Neoneon {
+  font-family:"Neoneon";
+  font-weight: normal;
+  font-style: normal;
+} 
+       
+.arialbold {
+  font-family:"arialbold";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.ArialCE {
+  font-family:"ArialCE";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.ArialCEBold {
+  font-family:"ArialCEBold";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.ArialCEBoldItalic {
+  font-family:"ArialCEBoldItalic";
+  font-weight: bold;
+  font-style: italic;
+}
+
+.ArialCEItalic {
+  font-family:"ArialCEItalic";
+  font-weight: normal;
+  font-style: italic;
+} 
+
+.ArialCEMTBlack {
+  font-family:"ArialCEMTBlack";
+  font-weight: normal;
+  font-style: italic;
+} 
+
+.Arial_GEO {
+  font-family:"Arial_GEO";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.ARI {
+  font-family:"ARI";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.Arialn {
+  font-family:"Arialn";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.Arialnb {
+  font-family:"Arialnb";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.ArialTh {
+  font-family:"ArialTh";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.ariblk {
+  font-family:"ariblk";
+  font-weight: normal;
+  font-style: normal;
+} 
+
+
+/*******************************************************************************************************************************************************/
 
 /*Colores:*/
 .rojo{
