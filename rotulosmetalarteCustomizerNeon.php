@@ -461,7 +461,8 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   // extra pack checkbox
   
      
-  $cart_item_data['new_price'] = $price + $precio_final_rotulo;
+  //$cart_item_data['new_price'] = $price + $precio_final_rotulo;
+  $cart_item_data['new_price'] = $precio_final_rotulo;
   
   /*
   echo "-->".$precio_final_rotulo;
