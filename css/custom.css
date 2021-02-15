@@ -9297,7 +9297,7 @@
 
 
 .tamanoLetras{
-	font-size: 12px;
+	font-size: 10px;
 }
 
 #myDIV {
@@ -9319,9 +9319,128 @@
   display: none;
 }
 
+
+/****************************************************************************************/
+/*Origenes de las fuentes (nuevas):*/
+
+  @font-face{
+    font-family:"Barcelony";
+    src: url("Fonts/barcelony/Barcelony.woff2") format("woff2"),
+         url("Fonts/barcelony/Barcelony.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"BeonMedium";
+    src: url("Fonts/beon/Beon.woff2") format("woff2"),
+         url("Fonts/beon/beon-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Slim Joe";
+    src: url("Fonts/BigJohnSlimJoe/SlimJoe.woff2") format("woff2"),
+         url("Fonts/BigJohnSlimJoe/SlimJoe.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Heartbeat in Christmas";
+    src: url("Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff2") format("woff2"),
+         url("Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family:"Intro Script";
+    src: url("Fonts/Intro_Script_Font_Family/IntroScriptDemoMedium400.woff2") format("woff2"),
+         url("Fonts/Intro_Script_Font_Family/IntroScriptDemoMedium400.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"las enter";
+    src: url("Fonts/lasenter/LasEnter_PersonalUseOnly.woff2") format("woff2"),
+         url("Fonts/lasenter/LasEnter_PersonalUseOnly.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"lie to me";
+    src: url("Fonts/lie_to_me/LietoMe.woff2") format("woff2"),
+         url("Fonts/lie_to_me/LietoMe.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"milasian circa";
+    src: url("Fonts/milasian_circa/MilasianCircaThinPERSONAL.woff2") format("woff2"),
+         url("Fonts/milasian_circa/MilasianCircaThinPERSONAL.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Nickainley";
+    src: url("Fonts/nickainley/Nickainley-Normal.woff2") format("woff2"),
+         url("Fonts/nickainley/Nickainley-Normal.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Raleway";
+    src: url("Fonts/Raleway/Raleway-VariableFont_wght.woff2") format("woff2"),
+         url("Fonts/Raleway/Raleway-VariableFont_wght.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"Roboto";
+    src: url("Fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
+         url("Fonts/Roboto/Roboto-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"saitama";
+    src: url("Fonts/saitama/saitama.woff2") format("woff2"),
+         url("Fonts/saitama/saitama.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"saitama";
+    src: url("Fonts/that_i_love_you/saitama.woff2") format("woff2"),
+         url("Fonts/that_i_love_you/saitama.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family:"that i love you";
+    src: url("Fonts/that_i_love_you/thatiloveyou.woff2") format("woff2"),
+         url("Fonts/that_i_love_you/thatiloveyou.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
 /****************************************************************************************/
 
-/*Origenes de las fuentes:*/
+/*Origenes de las fuentes (viejas):*/
 
   @font-face{
     font-family:"Axaxax W05 Regular";
@@ -9534,7 +9653,6 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'arialbold';
     src: url('Fonts/arial-sv/arialbd-webfont.woff2') format('woff2'),
@@ -9542,8 +9660,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 @font-face {
     font-family: 'ArialCE';
@@ -9568,7 +9684,6 @@
     font-weight: bold;
     font-style: italic;
 }
-
 
 @font-face {
     font-family: 'ArialCEItalic';
@@ -9634,8 +9749,6 @@
     font-style: normal;
 }
 
-
-
 /****************************************************************************************/
 
 #caja {
@@ -9659,6 +9772,86 @@
   
 }
 
+/************************************************************************Nuevas fuentes*******************************************************************************/
+.Barcelony {
+  font-family: "Barcelony";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.BeonMedium {
+  font-family: "BeonMedium";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.SlimJoe {
+  font-family: "Slim Joe";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.HeartbeatinChristmas {
+  font-family: "Heartbeat in Christmas";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.IntroScript {
+  font-family: "Intro Script";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lasenter {
+  font-family: "las enter";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.lietome {
+  font-family: "lie to me";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.milasiancirca {
+  font-family: "milasian circa";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Nickainley {
+  font-family: "Nickainley";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Raleway {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Roboto {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.saitama {
+  font-family: "saitama";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.thatiloveyou {
+  font-family: "that i love you";
+  font-style: normal;
+  font-weight: normal;
+}
+
+/************************************************************************Viejas fuentes*******************************************************************************/
 .monoton {
   font-family: "Monoton";
   font-style: normal;
@@ -9910,7 +10103,6 @@
   font-weight: normal;
   font-style: normal;
 } 
-
 
 /*******************************************************************************************************************************************************/
 

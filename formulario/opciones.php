@@ -10,8 +10,32 @@
   <div class="col-sm-4">
     <label for="alto">Tipo de Letra:</label>
     <select form="letras" class="form-select" id="letra" onchange="jQueryDoSomethingAJAX()">  
+<option style="font-family:'Axaxax W05 Regular';font-size: 25px" value="axaxax">Axaxax</option>
+
+<option style="font-family:'Barcelony'; font-size: 25px"value="Barcelony">Barcelony</option>
+<option style="font-family:'BeonMedium'; font-size: 25px"value="BeonMedium">Beon</option>
+<option style="font-family:'gruenewald_varegular';font-size: 25px"value="gruenewald_varegular">Gruenewald</option>
+<option style="font-family:'Heartbeat in Christmas'; font-size: 40px"value="HeartbeatinChristmas">Heartbeat in Christmas</option>
+<option style="font-family:'Intro Script';font-size: 25px"value="IntroScript">Intro Script</option>
+<option style="font-family:'las enter';font-size: 25px"value="lasenter">Las Enter</option>
+<option style="font-family:'lie to me';font-size: 25px"value="lietome">Lie to me</option>
+<option style="font-family:'milasian circa';font-size: 30px"value="milasiancirca">Milasian Circa</option>
+<option style="font-family:'neon_lightsregular';font-size: 20px"value="neon-lights">Neon Lights</option>
+<option style="font-family:'Neoneon';font-size: 20px"value="Neoneon">Neoneon</option>
+<option style="font-family:'neoncity_scriptregular';font-size: 35px"value="neoncity_scriptregular">Neoncity</option>
+<option style="font-family:'Nickainley';font-size: 25px"value="Nickainley">Nickainley</option>
+<option style="font-family:'optisantitaregular';font-size: 25px"value="optisantitaregular">Opti Santita</option>
+<option style="font-family:'Raleway';font-size: 25px"value="Raleway">Raleway</option>
+<option style="font-family:'Roboto';font-size: 25px"value="Roboto">Roboto</option>
+<option style="font-family:'saitama';font-size: 40px"value="saitama">Saitama</option>
+<option style="font-family:'signatura_monoline_scriptRg';font-size: 40px"value="signatura_monoline_scriptRg">Signatura Monoline</option>
+<option style="font-family:'Slim Joe';font-size: 25px"value="SlimJoe">Slim Joe</option>
+<option style="font-family:'that i love you';font-size: 25px"value="thatiloveyou">That i love you</option>
+
+
+
+<!--
       
-      <option style="font-family:'Axaxax W05 Regular';" value="axaxax">Axaxax W05 Regular</option>
       <option style="font-family:'arialbold';" value="arialbold">Arial Bold</option>
       <option style="font-family:'ArialCE';" value="ArialCE">ArialCE</option>
       <option style="font-family:'ArialCEBold';" value="ArialCEBold">ArialCEBold</option>
@@ -24,20 +48,6 @@
       <option style="font-family:'Arialnb';" value="Arialnb">Arial Nb</option>
       <option style="font-family:'ArialTh';" value="ArialTh">Arial Th</option>
       <option style="font-family:'ariblk';" value="ariblk">Arial Black</option>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <option style="font-family:'Bulo';"value="Bulo">Bulo</option>
       <option style="font-family:'Bulo Black';"value="Bulo_Black">Bulo Black</option>
       <option style="font-family:'Bulo Black Italic';"value="Bulo_Black_Italic">Bulo Black Italic</option>
@@ -58,14 +68,15 @@
       <option style="font-family:'Bulo Thin Italic';"value="Bulo_Thin_Italic">Bulo Thin Italic</option>
       <option style="font-family:'Bulo Ultra Black';"value="Bulo_Ultra_Black">Bulo Ultra Black</option>
       <option style="font-family:'Bulo Ultra Black Italic';"value="Bulo_Ultra_Black_Italic">Bulo Ultra Black Italic</option>
-      <option style="font-family:'gruenewald_varegular';"value="gruenewald_varegular">Gruenewald Va Regular</option>
       <option style="font-family:'Monoton';"value="monoton">Monoton</option>
-      <option style="font-family:'Neoneon';"value="Neoneon">Neoneon</option>
-      <option style="font-family:'neon_lightsregular';"value="neon-lights">Neon Lights Regular</option>
-      <option style="font-family:'neoncity_displayregular';"value="neoncity_displayregular">Neoncity Display Regular</option>
-      <option style="font-family:'neoncity_scriptregular';"value="neoncity_scriptregular">Neoncity Script Regular</option>
-      <option style="font-family:'optisantitaregular';"value="optisantitaregular">Optisantita Regular</option>
-      <option style="font-family:'signatura_monoline_scriptRg';"value="signatura_monoline_scriptRg">Signatura Monoline ScriptRg Regular</option>
+      
+      
+      
+      
+      
+      
+-->
+
     </select>
   </div>
   <br/><br/><br/>
