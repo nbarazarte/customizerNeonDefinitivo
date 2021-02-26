@@ -20,7 +20,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="metacrilato" value="<?php echo esc_html($cn_precio_metacrilato);?>" checked onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="metacrilato" value="<?php echo esc_html($cn_precio_metacrilato);?>" checked onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -41,7 +41,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="pvc" value="<?php echo esc_html($cn_precio_pvc);?>" onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="pvc" value="<?php echo esc_html($cn_precio_pvc);?>" onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -62,7 +62,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="dm" value="<?php echo esc_html($cn_precio_dm);?>" onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="dm" value="<?php echo esc_html($cn_precio_dm);?>" onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -83,7 +83,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="contrachapado" value="<?php echo esc_html($cn_precio_contraenchapado);?>" onchange="jQueryDoSomethingAJAX()">        
+                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="contrachapado" value="<?php echo esc_html($cn_precio_contraenchapado);?>" onchange="deshabiltarBotonCart()">        
                 </div>
 
                 <div class="col-sm-12">
@@ -104,7 +104,7 @@
               <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="maderadepino" value="<?php echo esc_html($cn_precio_maderadepino);?>" onchange="jQueryDoSomethingAJAX()">       
+                  <input onclick="textoRadio('tipoTrasera',this.id)" class="form-check-input" type="radio" name="traseraneon" id="maderadepino" value="<?php echo esc_html($cn_precio_maderadepino);?>" onchange="deshabiltarBotonCart()">       
                 </div>
 
                 <div class="col-sm-12">

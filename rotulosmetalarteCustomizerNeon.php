@@ -30,6 +30,14 @@ function custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
+function browser_scripts() {
+
+    wp_enqueue_script('browser', plugin_dir_url(__FILE__).'/js/node_modules/text-to-svg/build/test/browser.js', array(), false, true);
+    wp_enqueue_script( 'browser' );
+
+}
+add_action('wp_enqueue_scripts', 'browser_scripts');
+
 # Agregar informacion predeterminada al activar el plugin
 //Este Script se correra en 3 momentos: Al activar por primera vez, al actualizar, al reactivar
 register_activation_hook( __FILE__, 'cn_set_default_options' );
@@ -281,14 +289,6 @@ function jnj_mi_funcion()
     //echo '<pre>'.print_r($res).'</pre><br/>';
     //echo "Precio Base: ".$res['cn_precio_base']."<br/>";
      
-    //Éste cálculo también lo hago en custom.js en la función de ajax:  
-    $traseraNeon      = $_POST['anchocm'] * $_POST['alto'] * $_POST['trasera'];
-    $sujecionNeon     = $_POST['sujecionNeon'];
-    $dimmerNeon       = $_POST['dimmerNeon'];
-    $tiemposEntrega   = $_POST['tiemposEntrega'];
-    $precioNeon      = ($_POST['anchocm'] / 100) * 7;
-    $precio      = $precioNeon + $traseraNeon + $sujecionNeon + $dimmerNeon + $tiemposEntrega;
-    $precioFinal = $precio * 3.5;
 
     /*
       echo "<b>Fuente de Letra: </b>". $_POST['fuenteLetrasText']."<br/>";
@@ -306,7 +306,7 @@ function jnj_mi_funcion()
     $color = $_POST['color'];
 
     echo '<h1>
-      <small class="text-muted"> <strong>'. number_format($precioFinal,2,",","."). '&euro;<strong></small>
+      <small class="text-muted"> <strong>'. $_POST['precioFinal']. '&euro;<strong></small>
       
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
@@ -392,7 +392,7 @@ function campos_ocultos_customizerNeon() {
         </button>
        -->
 
-        <a id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+        <a id="myButton2" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
           <i class="fas fa-magic"></i> 
           Aplicar cambios
         </a>
@@ -403,22 +403,17 @@ function campos_ocultos_customizerNeon() {
 
       </div>
 
-
-
-
-
-
       <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
-      <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="Metalarte" readonly="yes">
-      <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="Axaxax W05 Regular" readonly="yes">
-      <input type="hidden" id="anchocm" name="anchocm" value="10" readonly="yes">
-      <input type="hidden" id="altocm" name="altocm" value="53.720" readonly="yes">
-      <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="metacrilato" readonly="yes">
-      <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="anclado a la pared" readonly="yes">   
-      <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="condimmer" readonly="yes">
-      <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="7 días (laborales)" readonly="yes">
-      <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="rectangular" readonly="yes">
-      <input type="hidden" id="colorSumario" name="colorSumario" value="amarillo" readonly="yes">
+      <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="" readonly="yes">
+      <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="" readonly="yes">
+      <input type="hidden" id="anchocm" name="anchocm" value="" readonly="yes">
+      <input type="hidden" id="altocm" name="altocm" value="" readonly="yes">
+      <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="" readonly="yes">
+      <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="" readonly="yes">   
+      <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="" readonly="yes">
+      <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="" readonly="yes">
+      <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="" readonly="yes">
+      <input type="hidden" id="colorSumario" name="colorSumario" value="" readonly="yes">
 
   </div>
   <?php

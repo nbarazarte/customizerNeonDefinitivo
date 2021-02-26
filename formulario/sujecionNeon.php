@@ -20,7 +20,7 @@
                <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="ancladoalapared" value="<?php echo esc_html($cn_precio_ancladoalapared);?>" checked onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="ancladoalapared" value="<?php echo esc_html($cn_precio_ancladoalapared);?>" checked onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -41,7 +41,7 @@
                <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="colgadoaltecho" value="<?php echo esc_html($cn_precio_colgadoaltecho);?>" onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="colgadoaltecho" value="<?php echo esc_html($cn_precio_colgadoaltecho);?>" onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -62,7 +62,7 @@
                <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="colgadocomouncuadro" value="<?php echo esc_html($cn_precio_colgadocomouncuadro);?>" onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="colgadocomouncuadro" value="<?php echo esc_html($cn_precio_colgadocomouncuadro);?>" onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">
@@ -83,7 +83,7 @@
                <div class="row">
 
                 <div class="col-sm-12">
-                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="sinsujecion" value="<?php echo esc_html($cn_precio_sinsujecion);?>" onchange="jQueryDoSomethingAJAX()">      
+                  <input onclick="textoRadio('tipoSujecion',this.id)" class="form-check-input" type="radio" name="sujecion" id="sinsujecion" value="<?php echo esc_html($cn_precio_sinsujecion);?>" onchange="deshabiltarBotonCart()">      
                 </div>
 
                 <div class="col-sm-12">

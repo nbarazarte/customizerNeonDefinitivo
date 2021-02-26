@@ -9315,6 +9315,14 @@
   visibility: visible;
 }
 
+#myButton2 {
+
+  /*display: none;*/
+  /*visibility: hidden;*/
+  /*display: inline;*/
+  visibility: visible;
+}
+
 #myCanvas{
   display: none;
 }
@@ -9415,14 +9423,6 @@
     font-family:"saitama";
     src: url("Fonts/saitama/saitama.woff2") format("woff2"),
          url("Fonts/saitama/saitama.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face{
-    font-family:"saitama";
-    src: url("Fonts/that_i_love_you/saitama.woff2") format("woff2"),
-         url("Fonts/that_i_love_you/saitama.woff") format("woff");
     font-weight: normal;
     font-style: normal;
   }

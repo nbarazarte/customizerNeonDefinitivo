@@ -1,12 +1,3 @@
-<!-- Fuentes -->
-
-<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">    
-<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
-
 <!-- Bootstrap CSS -->
 
 <!--
@@ -41,7 +32,3 @@
 ?>
 
 </div>
-
-<script type="text/javascript">
-  
-</script>
