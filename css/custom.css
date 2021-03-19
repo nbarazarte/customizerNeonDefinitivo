@@ -9327,6 +9327,13 @@
   display: none;
 }
 
+#medida{
+  display: none;
+}
+
+#result{
+  display: none;
+}
 
 /****************************************************************************************/
 /*Origenes de las fuentes (nuevas):*/

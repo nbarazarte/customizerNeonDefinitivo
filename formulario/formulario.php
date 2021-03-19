@@ -15,6 +15,14 @@
     </canvas>
 
     <input id="font-url-input" type="hidden" readonly="yes" value="http://localhost/desarrollo/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff" />
+
+  
+  
+<!--
+    <input id="font-url-input" type="hidden" readonly="yes" value="http://endirecto.ploshshop.com/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff" />
+-->
+  
+
     <div id="medida"> </div>
     <div id="result"> </div>
     
@@ -29,7 +37,7 @@
 
         <div id="caja">
           <div class="neon_effect signatura_monoline_scriptRg amarillo">
-            <p>Ainhoa Valentina</p>
+            <p>Luis Daniel</p>
           </div>
        </div>
 
@@ -54,7 +62,8 @@
         </div>        
 
       </div>
-
+      <input type="hidden" class="form-control" id="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="iva" value="<?php echo esc_html($iva);?>" readonly="yes"> 
         <?php
 
           require 'opciones.php';

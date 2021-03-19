@@ -52,6 +52,38 @@
         </div>
       </div>-->
 
+      <!--<div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">Impuesto</h5>
+
+              <div class="mb-3">
+                <label for="iva" class="form-label">% Valor:</label>
+                <input type="number" class="form-control" id="iva" name="iva" value="<?php echo esc_html($iva);?>" required/>
+                
+              </div>
+
+          </div>
+        </div>
+      </div>-->
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">Costo Transformador</h5>
+
+              <div class="mb-3">
+                <label for="costoTransformador" class="form-label">Valor:</label>
+                <input type="number" class="form-control" id="costoTransformador" name="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" required/>
+                
+              </div>
+
+          </div>
+        </div>
+      </div>
+
       <div class="col-sm-4">
         <div class="card">
           <div class="card-body">

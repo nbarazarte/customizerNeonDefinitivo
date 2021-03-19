@@ -1,9 +1,17 @@
 <div class="row g-3">
 
-  <div class="col-sm-8">
+  <div class="col-sm-4">
     <div class="col-12 form-floating mb-3">
-      <input type="text" class="form-control" id="rotulo" placeholder="Tu texto" value="Ainhoa Valentina" onkeyup="deshabiltarBotonCart()">  
+      <input type="text" class="form-control" id="rotulo" placeholder="Tu texto" value="Luis Daniel" onkeyup="deshabiltarBotonCart()">  
       <label for="rotulo">Escríbe tu texto aquí</label>
+    </div>
+  </div>
+
+
+    <div class="col-sm-4">
+    <div class="col-12 form-floating mb-3">
+      <input type="number" step=".01" class="form-control" id="alto" placeholder="Tamaño" value="10" onchange="deshabiltarBotonCart()">  
+      <label for="alto">Tamaño de letra</label>
     </div>
   </div>
 
@@ -17,13 +25,13 @@
       <option style="font-family:'Intro Script';font-size: 25px"value="IntroScript">Intro Script</option>
       <option style="font-family:'las enter';font-size: 25px"value="lasenter">Las Enter</option>
       <option style="font-family:'lie to me';font-size: 25px"value="lietome">Lie to me</option>
-      <option style="font-family:'milasian circa';font-size: 30px"value="milasiancirca">Milasian Circa</option>
+      <option style="font-family:'milasian circa';font-size: 30px"value="milasiancirca" >Milasian Circa</option>
       <option style="font-family:'Neoneon';font-size: 20px"value="Neoneon">Neoneon</option>
       <option style="font-family:'neoncity_scriptregular';font-size: 35px"value="neoncity_scriptregular">Neoncity</option>
       <option style="font-family:'Nickainley';font-size: 25px"value="Nickainley">Nickainley</option>
       <option style="font-family:'optisantitaregular';font-size: 25px"value="optisantitaregular">Opti Santita</option>
       <option style="font-family:'Raleway';font-size: 25px"value="Raleway">Raleway</option>
-      <option style="font-family:'Roboto';font-size: 25px"value="Roboto">Roboto</option>
+      <option style="font-family:'Roboto';font-size: 25px"value="Roboto" >Roboto</option>
       <option style="font-family:'saitama';font-size: 40px"value="saitama">Saitama</option>
       <option style="font-family:'signatura_monoline_scriptRg';font-size: 40px"value="signatura_monoline_scriptRg" selected>Signatura Monoline</option>
       <option style="font-family:'Slim Joe';font-size: 25px"value="SlimJoe">Slim Joe</option>
@@ -68,6 +76,13 @@
 
     </select>
   </div>
+
+
+
+
+
+
+
   <br/><br/><br/>
 </div>
 
@@ -75,8 +90,8 @@
 
   <div class="col-sm-4">
     <div class="col-12 form-floating mb-3">
-      <input type="number" step=".01" class="form-control" id="alto" placeholder="Alto total texto cm" value="10" onchange="deshabiltarBotonCart()">  
-      <label for="alto">Alto total texto cm</label>
+      <input type="text" class="form-control" id="altura" placeholder="Alto total texto cm" value="0" readonly="yes">  
+      <label for="altura">Alto total texto cm</label>
     </div>
   </div>
 

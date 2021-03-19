@@ -140,11 +140,11 @@ function jQueryDoSomethingAJAX() {
     var cadena = rotulo;
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    var posInicial = { x: 10, y: 50 };
+    var posInicial = { x: 10, y: 90 };
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     //calculamos el alto en píxeles (el alto viene en cm):
-    var altopx = alto * 300 * 0.393701;
+    var altopx = 60;//alto;// * 72 * 0.393701;
 
     ctx.font = altopx+"px "+fuenteLetras;
     ctx.fillText(cadena, posInicial.x, posInicial.y);
@@ -154,25 +154,37 @@ function jQueryDoSomethingAJAX() {
 
     //calculamos el alto en centímetros:
     //var anchocm = 45.8488;//ancho/300/0.393701;
-    var anchocm = ancho/300/0.393701;
+    var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
+
+    var alturacm = document.getElementById("altura").value;
     //console.log('Alto:', altopx, 'píxeles.');
     //console.log('Ancho:', ancho, 'píxeles.');
     //console.log('Ancho:', anchocm, 'centímetros.');
 
     //Seteamos el ancho:
-    document.getElementById("ancho").value = anchocm.toFixed(3);    
+    //document.getElementById("ancho").value = anchocm.toFixed(3);    
 
     //ancho del SVG:
     var anchoSVG = document.getElementById('anchoSVG').value;
+    var anchoSVGCorreccion = anchoSVG * 0.76;
+    var costoTransformador = Number(document.getElementById('costoTransformador').value);
+
+    document.getElementById('impuesto').value = document.getElementById('iva').value;
     //Calculo el precio del rótulo y lo envío al campo oculto en el formulario del carrito:
 
-    console.log("Ancho SVG en cm: " + anchoSVG);
-    console.log("Ancho en cm: " + anchocm.toFixed(3));
-    console.log("Alto en cm: " + alto);
+    console.log("Ancho SVG Path A en cm: " + anchoSVG);
+    console.log("Ancho SVG Path B en cm: " + anchoSVGCorreccion.toFixed(3));
+    console.log("Ancho en cm: " + anchocm);
+    console.log("Altura en cm: " + alturacm);
+    console.log("Tamaño de letra: " + alto);
+    //console.log("Alto en px: " + altopx);
     console.log("Trasera Neon: " +trasera);
     console.log("Sujecion Neon: " + sujecionNeon);
     console.log("dimmerNeon: "+ dimmerNeon);
     console.log("Tiempo entrega: "+ tiemposEntrega);
+    console.log("Costo Transformador: "+ costoTransformador);
+
+
 
     console.log("-----------------------------------------------");
 
@@ -180,19 +192,23 @@ function jQueryDoSomethingAJAX() {
     sujecionNeon    = Number(sujecionNeon);
     dimmerNeon      = Number(dimmerNeon);
     tiemposEntrega  = Number(tiemposEntrega);
-    tipoLetra       = (Number(anchoSVG) / 100) * 7;
+    tipoLetra       = (Number(anchoSVGCorreccion) / 100) * 7;
     
-    console.log("Total Trasera: " +anchocm.toFixed(3) +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
+    console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
     console.log("Total sujecion Neon: " + sujecionNeon);
     console.log("Total dimmer Neon: " + dimmerNeon);
     console.log("Total tiempos de entrega: " + tiemposEntrega);
-    console.log("Tipo de letra: ("+anchoSVG +"/100) x 7 = "+ tipoLetra.toFixed(3));
+    console.log("Tipo de letra: ("+anchoSVGCorreccion +"/100) x 7 = "+ tipoLetra.toFixed(3));
 
     //((Tipo de letra + trasera de neón + sujeción del neón + dimmer ) * 3) + tiempo de entrega
 
-    precioFinal     = ((tipoLetra + traseraNeon + sujecionNeon + dimmerNeon) * 3) + tiemposEntrega;
+    subTotalprecio     = ((tipoLetra + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
 
-    console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(2));
+    var iva = Number(document.getElementById('iva').value / 100);
+
+    precioFinal     = subTotalprecio;//(subTotalprecio * iva) + subTotalprecio;
+
+    console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+" + "+costoTransformador+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(3));
 
     var data = {
         'action': 'jnjtest',
@@ -208,10 +224,12 @@ function jQueryDoSomethingAJAX() {
         'tipoSujecion': tipoSujecion,
         'dimmerNeon': dimmerNeon,
         'color': color,
-        'anchocm': anchocm.toFixed(3),
+        'anchocm': anchocm,
         'fuenteLetrasText': fuenteLetrasText,
         'tiemposEntregaText': tiemposEntregaText,
+        'subTotalprecio': subTotalprecio.toFixed(2),
         'precioFinal': precioFinal.toFixed(2),
+
     };
 
     var protocolo = window.location.protocol;
@@ -254,9 +272,13 @@ function jQueryDoSomethingAJAX() {
         document.getElementById('response').innerHTML = response;
 
         document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
+        document.getElementById('subTotalPrecio').value          = subTotalprecio.toFixed(2);
         document.getElementById('texto_rotulo').value            = rotulo;
         document.getElementById('fuenteLetrasText').value        = fuenteLetrasText;
         document.getElementById('anchocm').value                 = anchocm;
+        
+        document.getElementById('alturacm').value                 = alturacm;
+
         document.getElementById('altocm').value                  = alto;
         document.getElementById('tipoTraseraSumario').value      = tipoTrasera;
         document.getElementById('tipoSujecionSumario').value     = tipoSujecion;
@@ -264,6 +286,8 @@ function jQueryDoSomethingAJAX() {
         document.getElementById('tiempoEntregaSumario').value    = tiemposEntregaText;
         document.getElementById('tipoContornoSumario').value     = contorno;
         document.getElementById('colorSumario').value            = color;
+        document.getElementById('pathA').value                   = anchoSVG;
+        document.getElementById('pathB').value                   = anchoSVGCorreccion.toFixed(3);
 
         document.getElementsByName("add-to-cart")[0].style.visibility = 'visible';
     });

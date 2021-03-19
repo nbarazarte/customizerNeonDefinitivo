@@ -58,6 +58,14 @@ function cn_set_default_options() {
         add_option( 'cn_precio_base', '23.70' );
     }
 
+    if ( get_option( 'iva' ) === false ) {
+        add_option( 'iva', '21' );
+    }
+
+    if ( get_option( 'costoTransformador' ) === false ) {
+        add_option( 'costoTransformador', '10' );
+    }        
+
     if ( get_option( 'cn_precio_dimmer' ) === false ) {
         add_option( 'cn_precio_dimmer', '5.00' );
     }
@@ -126,6 +134,8 @@ function cn_genera_pagina() {
   $cn_id_producto_personalizado   = get_option( 'cn_id_producto_personalizado' ) ;
   $cn_pagina                      = get_option( 'cn_pagina' ) ;
   $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
+  $iva                            = get_option( 'iva' ) ;
+  $costoTransformador             = get_option( 'costoTransformador' ) ;
   $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
   $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
   $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
@@ -157,6 +167,8 @@ function cn_guardar_ga() {
     $cn_id_producto_personalizado   = sanitize_text_field( $_POST['cn_id_producto_personalizado'] );
     $cn_pagina                      = sanitize_text_field( $_POST['cn_pagina'] );
     $cn_precio_base                 = sanitize_text_field( $_POST['cn_precio_base'] );
+    $iva                            = sanitize_text_field( $_POST['iva'] );
+    $costoTransformador             = sanitize_text_field( $_POST['costoTransformador'] );
     $cn_precio_dimmer               = sanitize_text_field( $_POST['cn_precio_dimmer'] );
     $cn_precio_metacrilato          = sanitize_text_field( $_POST['cn_precio_metacrilato'] );
     $cn_precio_dm                   = sanitize_text_field( $_POST['cn_precio_dm'] );
@@ -174,6 +186,8 @@ function cn_guardar_ga() {
     update_option( 'cn_id_producto_personalizado', $cn_id_producto_personalizado );
     update_option( 'cn_pagina', $cn_pagina );
     update_option( 'cn_precio_base', $cn_precio_base );
+    update_option( 'iva', $iva );
+    update_option( 'costoTransformador', $costoTransformador );
     update_option( 'cn_precio_dimmer', $cn_precio_dimmer );
     update_option( 'cn_precio_metacrilato', $cn_precio_metacrilato );
     update_option( 'cn_precio_dm', $cn_precio_dm );
@@ -341,6 +355,8 @@ function iconic_output_engraving_field() {
       // Conseguir el valor del Precio base de todos los elementos:
       $cn_pagina                      = get_option( 'cn_pagina' ) ;
       $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
+      $iva                            = get_option( 'iva' ) ;
+      $costoTransformador             = get_option( 'costoTransformador' ) ;
       $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
       $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
       $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
@@ -407,6 +423,9 @@ function campos_ocultos_customizerNeon() {
       <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="" readonly="yes">
       <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="" readonly="yes">
       <input type="hidden" id="anchocm" name="anchocm" value="" readonly="yes">
+
+      <input type="hidden" id="alturacm" name="alturacm" value="" readonly="yes">
+
       <input type="hidden" id="altocm" name="altocm" value="" readonly="yes">
       <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="" readonly="yes">
       <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="" readonly="yes">   
@@ -414,6 +433,10 @@ function campos_ocultos_customizerNeon() {
       <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="" readonly="yes">
       <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="" readonly="yes">
       <input type="hidden" id="colorSumario" name="colorSumario" value="" readonly="yes">
+      <input type="hidden" id="impuesto" name="impuesto" value="" readonly="yes">
+      <input type="hidden" id="subTotalPrecio" name="subTotalPrecio" value="" readonly="yes">
+      <input type="hidden" id="pathA" name="pathA" value="" readonly="yes">
+      <input type="hidden" id="pathB" name="pathB" value="" readonly="yes">
 
   </div>
   <?php
@@ -439,6 +462,10 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   $texto_rotulo         = filter_input( INPUT_POST, 'texto_rotulo' );
   $fuenteLetrasText     = filter_input( INPUT_POST, 'fuenteLetrasText' );
   $anchocm              = filter_input( INPUT_POST, 'anchocm' );
+
+  $alturacm              = filter_input( INPUT_POST, 'alturacm' );
+
+
   $altocm               = filter_input( INPUT_POST, 'altocm' );
   $tipoTraseraSumario   = filter_input( INPUT_POST, 'tipoTraseraSumario' );
   $tipoSujecionSumario  = filter_input( INPUT_POST, 'tipoSujecionSumario' );
@@ -446,6 +473,10 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   $tiempoEntregaSumario = filter_input( INPUT_POST, 'tiempoEntregaSumario' ); 
   $tipoContornoSumario  = filter_input( INPUT_POST, 'tipoContornoSumario'  ); 
   $colorSumario         = filter_input( INPUT_POST, 'colorSumario'         );
+  $impuesto             = filter_input( INPUT_POST, 'impuesto'         );
+  $subTotalPrecio       = filter_input( INPUT_POST, 'subTotalPrecio'         );
+  $pathA                = filter_input( INPUT_POST, 'pathA'         );
+  $pathB                = filter_input( INPUT_POST, 'pathB'         );
 
   if ( empty( $precio_final_rotulo ) ) {
     return $cart_item_data;
@@ -474,13 +505,20 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   $cart_item_data['texto_rotulo']         = $texto_rotulo;
   $cart_item_data['fuenteLetrasText']     = $fuenteLetrasText;
   $cart_item_data['anchocm']              = number_format($_POST['anchocm'],3,",",".");
+
+  $cart_item_data['alturacm']              = number_format($_POST['alturacm'],3,",",".");
+
   $cart_item_data['altocm']               = $altocm;
   $cart_item_data['tipoTraseraSumario']   = $tipoTraseraSumario;
   $cart_item_data['tipoSujecionSumario']  = $tipoSujecionSumario;
   $cart_item_data['tipoDimmerSumario']    = $tipoDimmerSumario;
   $cart_item_data['tiempoEntregaSumario'] = $tiempoEntregaSumario;
   $cart_item_data['tipoContornoSumario']  = $tipoContornoSumario;
-  $cart_item_data['colorSumario']  = $colorSumario;
+  $cart_item_data['colorSumario']         = $colorSumario;
+  $cart_item_data['impuesto']             = $impuesto;
+  $cart_item_data['subTotalPrecio']       = $subTotalPrecio;
+  $cart_item_data['pathA']                = $pathA;
+  $cart_item_data['pathB']                = $pathB;
 
   return $cart_item_data;
 }
@@ -514,13 +552,19 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
   );   
 
   $item_data[] = array(
+    'key'     => __( 'Altura (cm)', 'iconic' ),
+    'value'   => wc_clean( $cart_item['alturacm'] ),
+    'display' => '',
+  );
+
+  $item_data[] = array(
     'key'     => __( 'Ancho (cm)', 'iconic' ),
     'value'   => wc_clean( $cart_item['anchocm'] ),
     'display' => '',
   );
 
   $item_data[] = array(
-    'key'     => __( 'Alto (cm)', 'iconic' ),
+    'key'     => __( 'Tamaño de letra', 'iconic' ),
     'value'   => wc_clean( $cart_item['altocm'] ),
     'display' => '',
   );  
@@ -560,6 +604,31 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
     'value'   => wc_clean( $cart_item['colorSumario'] ),
     'display' => '',
   ); 
+
+   $item_data[] = array(
+    'key'     => __( 'Longitud Path A', 'iconic' ),
+    'value'   => wc_clean( $cart_item['pathA'] ),
+    'display' => '',
+  ); 
+
+   $item_data[] = array(
+    'key'     => __( 'Longitud Path B', 'iconic' ),
+    'value'   => wc_clean( $cart_item['pathB'] ),
+    'display' => '',
+  );
+
+   /*
+   $item_data[] = array(
+    'key'     => __( 'Impuesto (gastos de envío)', 'iconic' ),
+    'value'   => wc_clean( $cart_item['impuesto'] ."%"),
+    'display' => '',
+  ); */
+
+   $item_data[] = array(
+    'key'     => __( 'Sub Total', 'iconic' ),
+    'value'   => wc_clean( $cart_item['subTotalPrecio'] ." &euro;"),
+    'display' => '',
+  );       
 
   return $item_data;
 }
