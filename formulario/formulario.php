@@ -10,16 +10,10 @@
     </div>
     <div class="card-body">
 
-    <canvas id="myCanvas"  style="border:1px solid #d3d3d3; width: 300; height: 300">
-    Your browser does not support the canvas element.
-    </canvas>
+    <input id="font-url-input" type="hidden" readonly="yes" value="http://localhost/desarrollo/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff" />
 
-    <input id="font-url-input" type="hidden" readonly="yes" value="http://localhost/desarrollo/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff" />
-
-  
-  
 <!--
-    <input id="font-url-input" type="hidden" readonly="yes" value="http://endirecto.ploshshop.com/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff" />
+    <input id="font-url-input" type="hidden" readonly="yes" value="http://endirecto.ploshshop.com/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff" />
 -->
   
 
@@ -36,8 +30,8 @@
         <div style="font-size: 10px;"> ENVÍO GRATUITO</div>
 
         <div id="caja">
-          <div class="neon_effect signatura_monoline_scriptRg amarillo">
-            <p>Luis Daniel</p>
+          <div class="neon_effect HeartbeatinChristmas amarillo">
+            <p>Rótulos Metalarte</p>
           </div>
        </div>
 

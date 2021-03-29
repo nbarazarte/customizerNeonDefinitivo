@@ -136,33 +136,11 @@ function jQueryDoSomethingAJAX() {
 
     var color = txt;
 
-    //Texto
-    var cadena = rotulo;
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    var posInicial = { x: 10, y: 90 };
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    //calculamos el alto en píxeles (el alto viene en cm):
-    var altopx = 60;//alto;// * 72 * 0.393701;
-
-    ctx.font = altopx+"px "+fuenteLetras;
-    ctx.fillText(cadena, posInicial.x, posInicial.y);
-
-    //Obtenemos el acho en píxeles:
-    var ancho = ctx.measureText(cadena).width;
-
-    //calculamos el alto en centímetros:
-    //var anchocm = 45.8488;//ancho/300/0.393701;
     var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
 
     var alturacm = document.getElementById("altura").value;
-    //console.log('Alto:', altopx, 'píxeles.');
-    //console.log('Ancho:', ancho, 'píxeles.');
-    //console.log('Ancho:', anchocm, 'centímetros.');
 
-    //Seteamos el ancho:
-    //document.getElementById("ancho").value = anchocm.toFixed(3);    
 
     //ancho del SVG:
     var anchoSVG = document.getElementById('anchoSVG').value;
@@ -209,6 +187,11 @@ function jQueryDoSomethingAJAX() {
     precioFinal     = subTotalprecio;//(subTotalprecio * iva) + subTotalprecio;
 
     console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+" + "+costoTransformador+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(3));
+
+
+    if(document.getElementById("altura").value == 0){
+        precioFinal = 0;
+    }
 
     var data = {
         'action': 'jnjtest',
@@ -315,14 +298,4 @@ window.addEventListener("load", function() {
 function textoRadio(input,name){
 
     document.getElementById(input).value = name;
-}
-
-
-function fuente(fuente){
-
-
-
-   
-
-
 }
