@@ -1,19 +1,13 @@
 <div class="row g-3">
 
-  <div class="col-sm-12">
-    <div class="col-12 form-floating mb-3">
-      <input type="text" class="form-control" id="rotulo" placeholder="Tu texto" value="Rótulos Metalarte" onkeyup="deshabiltarBotonCart()">  
-      <label for="rotulo">Escríbe tu texto aquí</label>
-    </div>
+  <div class="col-sm-6">
+      <label for="rotulo">Escríbe tu texto aquí:</label>
+      <input type="text" class="" id="rotulo" placeholder="Tu texto" value="Rótulos Metalarte" onkeyup="deshabiltarBotonCart()">  
   </div>
-
-</div>
-
-<div class="row g-3">
 
   <div class="col-sm-6">
 
-    <label for="alto">Tipo de letra:</label>
+    <label for="alto">Tipografía:</label>
     <select form="letras" class="form-select" id="letra" onchange=""><!-- browser.js ln 274-->  
       <option style="font-family:'Barcelony'; font-size: 25px"value="Barcelony">Barcelony</option>
       <option style="font-family:'BeonMedium'; font-size: 25px"value="BeonMedium">Beon</option>
@@ -35,36 +29,34 @@
 
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     
-    <label for="altoAncho">Tamaño de la letra:</label>
+    <label for="altoAncho">Tamaño:</label>
     <input type="number" step=".001" class="" id="altoAncho" value="11.000">  
     <input type="hidden" class="form-range" id="alto" value="11.000" readonly="yes"> 
 
   </div>
 
-</div>
-
-<br/>
-
-<div class="row g-3">
-
   <div class="col-sm-4">
     
-    <label for="altura">Alto (mín. 11 cm)</label>
+    <label for="altura">Alto: </label> <span style="font-size: 10px; color: red;">(mín. 11 cm)</span>
     <input type="text" class="" id="altura" placeholder="Alto total texto cm" value="11.000" readonly="yes">    
     
   </div>
 
   <div class="col-sm-4">
       
-    <label for="ancho">Ancho (máx. 240 cm)</label>
+    <label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 240 cm)</span>
     <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="68.853" readonly="yes">
     <input type="hidden" class="form-control" id="anchoSVG" value="0" readonly="yes">
 
   </div>
 
-  <div class="col-sm-4">
+</div>
+
+<div class="row g-3">
+
+  <div class="col-sm-12">
 
     <label for="alto">Tiempos de Entrega:</label>
     <select for="tiempos" class="form-select" id="tiempos" onchange="deshabiltarBotonCart()">  

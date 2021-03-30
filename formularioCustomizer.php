@@ -12,6 +12,12 @@
     display:none;
   }
 
+  .woocommerce-Price-amount, 
+  .amount {
+    display:none; 
+  }
+
+
   .woocommerce #content div.product div.summary, 
   .woocommerce div.product div.summary, 
   .woocommerce-page #content div.product div.summary, 

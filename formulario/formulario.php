@@ -1,14 +1,4 @@
 <!--<form id="customizerNeon">-->
-  <div class="card border-light mb-3">
-    <div class="card-header">
-
-      <span style="font-size: 28px; color: #870D00;">
-        <i class="fas fa-spray-can"></i>
-      </span>
-
-      Letras de neon personalizadas
-    </div>
-    <div class="card-body">
 
     <input id="font-url-input" type="hidden" readonly="yes" value="http://localhost/desarrollo/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff" />
 
@@ -16,18 +6,23 @@
     <input id="font-url-input" type="hidden" readonly="yes" value="http://endirecto.ploshshop.com/wp-content/plugins/rotulosmetalarteCustomizerNeon/css/Fonts/heartbeat_in_christmas/HeartbeatinChristmas.woff" />
 -->
   
-
     <div id="medida"> </div>
     <div id="result"> </div>
     
       <div id="response">
         
         <h1>
-          <small class="text-muted"> <strong> <?php echo esc_html($cn_precio_base);?>&euro;<strong></small>
+          <small class="text-muted"> <strong> 0<?php echo esc_html($cn_precio_base);?>&euro;<strong></small>
             <!--<input type="text" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="0.00" readonly="yes">-->
         </h1>
         <div style="font-size: 10px; color: #870D00"> IVA incluido</div>
         <div style="font-size: 10px;"> ENVÍO GRATUITO</div>
+
+        <p style="text-align: justify;">
+          Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
+          Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
+          Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner.
+        </p>
 
         <div id="caja">
           <div class="neon_effect HeartbeatinChristmas amarillo">
@@ -63,17 +58,17 @@
           require 'opciones.php';
 
           require 'formaContorno.php';
-
-          require 'traseraNeon.php';
+                    
+         /* require 'traseraNeon.php';
 
           require 'sujecionNeon.php';
 
           require 'dimmer.php';
+*/
+         // require 'colores.php';
 
-          require 'colores.php';
+        
 
         ?>
       
-    </div>
-  </div>
 <!--</form>-->

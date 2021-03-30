@@ -324,7 +324,13 @@ function jnj_mi_funcion()
       
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
-    <div style="font-size: 10px;">ENVÍO GRATUITO</div>';
+    <div style="font-size: 10px;">ENVÍO GRATUITO</div>
+
+        <p style="text-align: justify;">
+          Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
+          Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
+          Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner.
+        </p>';
 
     echo '<div id="caja">
             <div class="neon_effect '.$fuente.' '.$color.' ">
@@ -374,7 +380,10 @@ function iconic_output_engraving_field() {
 
 }
 
-add_action( 'woocommerce_before_single_product_summary', 'iconic_output_engraving_field', 10 );
+add_action( 'woocommerce_before_single_product', 'iconic_output_engraving_field', 10 );
+
+//woocommerce_single_product_summary
+//woocommerce_before_single_product
 //add_action( 'woocommerce_before_add_to_cart_button', 'iconic_output_engraving_field', 10 );
 
 
