@@ -299,3 +299,15 @@ function textoRadio(input,name){
 
     document.getElementById(input).value = name;
 }
+
+
+function miToolTip(div,valor){
+
+    document.getElementById('toolTip_'+div).innerHTML = valor;
+}
+
+function miToolTipOut(div){
+
+    document.getElementById('toolTip_'+div).innerHTML = "";
+
+}

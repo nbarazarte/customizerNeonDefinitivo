@@ -21,7 +21,6 @@
         <p style="text-align: justify;">
           Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
           Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
-          Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner.
         </p>
 
         <div id="caja">
@@ -53,22 +52,35 @@
       </div>
       <input type="hidden" class="form-control" id="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" readonly="yes">
       <input type="hidden" class="form-control" id="iva" value="<?php echo esc_html($iva);?>" readonly="yes"> 
-        <?php
 
-          require 'opciones.php';
+      <div class="card" style="">
 
-          require 'formaContorno.php';
-                    
-         /* require 'traseraNeon.php';
+        <div class="card-header">
+          Personaliza tu rótulo
+        </div>
 
-          require 'sujecionNeon.php';
+        <div class="card-body">
 
-          require 'dimmer.php';
-*/
-         // require 'colores.php';
+          <?php
 
-        
+            require 'opciones.php';
 
-        ?>
+            require 'formaContorno.php';
+                      
+           /* 
+            require 'traseraNeon.php';
+
+            require 'sujecionNeon.php';
+
+            require 'dimmer.php';
+          
+            require 'colores.php';
+
+          */
+          ?>
+        </div>
       
+      </div>
+    
+    <br/>
 <!--</form>-->

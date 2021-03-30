@@ -54,6 +54,10 @@
 
 </div>
 
+<br/>
+  <div id="errorAltoAncho" style="color: red; text-align: center;"></div>
+<br/>
+
 <div class="row g-3">
 
   <div class="col-sm-12">
