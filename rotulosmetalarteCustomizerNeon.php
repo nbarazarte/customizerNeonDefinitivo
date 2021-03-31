@@ -325,11 +325,11 @@ function jnj_mi_funcion()
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
     <div style="font-size: 10px;">ENVÍO GRATUITO</div>
-
-        <p style="text-align: justify;">
-Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
-          Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
-        </p>';
+    <h3>Letras de Neón</h3>
+    <p style="text-align: justify;">
+      Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
+      Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
+    </p>';
 
     echo '<div id="caja">
             <div class="neon_effect '.$fuente.' '.$color.' ">

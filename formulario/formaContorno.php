@@ -177,7 +177,7 @@ p{margin-bottom:.3em;}
               <input type="radio" name="contornos" id="personalizado" value="personalizado" onchange="deshabiltarBotonCart()">
               <label class="drinkcard-cc personalizado" for="personalizado" onmouseover="miToolTip('contorno','Personalizado')" onmouseout="miToolTipOut('contorno')"></label>
 
-            </div> <div id="toolTip_contorno"></div>
+            </div> <div id="toolTip_contorno">&nbsp;</div>
 
           </div>
         </div>
@@ -205,7 +205,7 @@ p{margin-bottom:.3em;}
               <input onclick="textoRadio('tipoSujecion',this.id)" type="radio" name="sujecion" id="sinsujecion" value="<?php echo esc_html($cn_precio_sinsujecion);?>" onchange="deshabiltarBotonCart()">
               <label class="drinkcard-cc sinsujecion" for="sinsujecion" onmouseover="miToolTip('sujecion','Sin sujeción')" onmouseout="miToolTipOut('sujecion')"></label>
 
-            </div> <div id="toolTip_sujecion"></div>
+            </div> <div id="toolTip_sujecion">&nbsp;</div>
 
           </div>
         </div>          
@@ -230,7 +230,7 @@ p{margin-bottom:.3em;}
               <input onclick="textoRadio('tipoDimmer',this.id)" type="radio" name="dimmer" id="sindimmer" value="0" onchange="deshabiltarBotonCart()">  
               <label class="drinkcard-cc sindimmer" for="sindimmer" onmouseover="miToolTip('dimmer','Sin dimmer')" onmouseout="miToolTipOut('dimmer')"></label>
 
-            </div> <div id="toolTip_dimmer"></div>
+            </div> <div id="toolTip_dimmer">&nbsp;</div>
 
           </div>
         </div> 
@@ -263,7 +263,7 @@ p{margin-bottom:.3em;}
               <input onclick="textoRadio('tipoTrasera',this.id)" type="radio" name="traseraneon" id="maderadepino" value="<?php echo esc_html($cn_precio_maderadepino);?>" onchange="deshabiltarBotonCart()"> 
               <label class="drinkcard-cc maderadepino" for="maderadepino" onmouseover="miToolTip('traseraneon','Madera de pino')" onmouseout="miToolTipOut('traseraneon')"></label> 
 
-            </div> <div id="toolTip_traseraneon"></div>
+            </div> <div id="toolTip_traseraneon">&nbsp;</div>
 
           </div>
         </div>              
@@ -304,7 +304,7 @@ p{margin-bottom:.3em;}
               <input  type="radio" name="colores" value="fucsia" id="fucsiaColor" onchange="deshabiltarBotonCart()"> 
               <label class="drinkcard-cc fucsiaColor" for="fucsiaColor" onmouseover="miToolTip('colores','Fucsia')" onmouseout="miToolTipOut('colores')"></label> 
 
-            </div> <div id="toolTip_colores"></div>
+            </div> <div id="toolTip_colores">&nbsp;</div>
 
           </div>
         </div>            

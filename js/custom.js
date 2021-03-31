@@ -303,11 +303,13 @@ function textoRadio(input,name){
 
 function miToolTip(div,valor){
 
+    document.getElementById('toolTip_'+div).style.visibility = "visible";
     document.getElementById('toolTip_'+div).innerHTML = valor;
 }
 
 function miToolTipOut(div){
 
-    document.getElementById('toolTip_'+div).innerHTML = "";
+    //document.getElementById('toolTip_'+div).innerHTML = "";
+    document.getElementById('toolTip_'+div).style.visibility = "hidden";
 
 }

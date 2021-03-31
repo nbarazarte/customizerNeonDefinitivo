@@ -9323,7 +9323,13 @@
   visibility: visible;
 }
 
-
+#toolTip_contorno,
+#toolTip_sujecion,
+#toolTip_dimmer,
+#toolTip_traseraneon,
+#toolTip_colores{
+  visibility: hidden;
+}
 
 #medida{
   display: none;
@@ -10263,9 +10269,3 @@
     text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #e30052, 0 0 9px #e30052, 0 0 15px #e30052, 0 0 20px #e30052, 0 0 25px #e30052;
   }
 }
-
-
-
-
-
-

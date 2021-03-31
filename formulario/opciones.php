@@ -7,7 +7,7 @@
 
   <div class="col-sm-6">
 
-    <label for="alto">Tipografía:</label>
+    <label for="alto">Fuente de la letra:</label>
     <select form="letras" class="form-select" id="letra" onchange=""><!-- browser.js ln 274-->  
       <option style="font-family:'Barcelony'; font-size: 25px"value="Barcelony">Barcelony</option>
       <option style="font-family:'BeonMedium'; font-size: 25px"value="BeonMedium">Beon</option>
@@ -31,7 +31,7 @@
 
   <div class="col-sm-4">
     
-    <label for="altoAncho">Tamaño:</label>
+    <label for="altoAncho">Tamaño de la fuente:</label>
     <input type="number" step=".001" class="" id="altoAncho" value="11.000">  
     <input type="hidden" class="form-range" id="alto" value="11.000" readonly="yes"> 
 
