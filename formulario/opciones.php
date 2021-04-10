@@ -1,14 +1,14 @@
 <div class="row g-3">
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
       <label for="rotulo">Escríbe tu texto aquí:</label>
       <input type="text" class="" id="rotulo" placeholder="Tu texto" value="Rótulos Metalarte" onkeyup="deshabiltarBotonCart()">  
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
 
     <label for="alto">Fuente de la letra:</label>
-    <select form="letras" class="form-select" id="letra" onchange=""><!-- browser.js ln 274-->  
+    <select form="letras" class="form-select" id="letra" onchange="" style="height: 50px;">  <!-- browser.js ln 274-->  
       <option style="font-family:'Barcelony'; font-size: 25px"value="Barcelony">Barcelony</option>
       <option style="font-family:'BeonMedium'; font-size: 25px"value="BeonMedium">Beon</option>
       <option style="font-family:'Heartbeat in Christmas'; font-size: 40px"value="HeartbeatinChristmas" selected>Heartbeat in Christmas</option>
@@ -25,6 +25,16 @@
       <option style="font-family:'signatura_monoline_scriptRg';font-size: 40px"value="signatura_monoline_scriptRg">Signatura Monoline</option>
       <option style="font-family:'Slim Joe';font-size: 25px"value="SlimJoe">Slim Joe</option>
       <option style="font-family:'that i love you';font-size: 25px"value="thatiloveyou">That i love you</option>
+    </select>
+
+  </div>
+
+  <div class="col-sm-4">
+
+    <label for="alto">Tiempos de Entrega:</label>
+    <select for="tiempos" class="form-select" id="tiempos" onchange="deshabiltarBotonCart()" style="height: 50px;">  
+      <option value="<?php echo esc_html($cn_precio_sietediaslaborales);?>">7 días (laborales)</option>
+      <option value="<?php echo esc_html($cn_precio_4872);?>">48 a 72 horas</option>
     </select>
 
   </div>
@@ -56,20 +66,4 @@
 
 <br/>
   <div id="errorAltoAncho" style="color: red; text-align: center;"></div>
-<br/>
 
-<div class="row g-3">
-
-  <div class="col-sm-12">
-
-    <label for="alto">Tiempos de Entrega:</label>
-    <select for="tiempos" class="form-select" id="tiempos" onchange="deshabiltarBotonCart()">  
-      <option value="<?php echo esc_html($cn_precio_sietediaslaborales);?>">7 días (laborales)</option>
-      <option value="<?php echo esc_html($cn_precio_4872);?>">48 a 72 horas</option>
-    </select>
-
-  </div>
-
-</div>
-
-<br/>

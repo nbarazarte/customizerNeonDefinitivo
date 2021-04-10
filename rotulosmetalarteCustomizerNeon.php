@@ -10,7 +10,7 @@ License: GPLv2
 */
 
 //Archivos css y js propios del plugin:
-include(plugin_dir_url(__FILE__).'funciones.php');
+//include(plugin_dir_url(__FILE__).'funciones.php');
 
 // Register Style
 function custom_styles() {
@@ -325,7 +325,7 @@ function jnj_mi_funcion()
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
     <div style="font-size: 10px;">ENVÍO GRATUITO</div>
-    <h3>Letras de Neón</h3>
+    <h3 style="font-size: 24px;font-family: "Open Sans", sans-serif;">Letras de Neón Personalizadas</h3>
     <p style="text-align: justify;">
       Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
       Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
@@ -333,7 +333,7 @@ function jnj_mi_funcion()
 
     echo '<div id="caja">
             <div class="neon_effect '.$fuente.' '.$color.' ">
-              <p>'.$_POST['rotulo'].'</p>
+              '.$_POST['rotulo'].'
             </div>
           </div>';  
 
