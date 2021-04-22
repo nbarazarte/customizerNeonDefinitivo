@@ -6,7 +6,8 @@ if(document.getElementById('rotulo') !== null){
 
 function deshabiltarBotonCart(){
     //console.log('deshabilita el boton');
-    document.getElementsByName("add-to-cart")[0].style.visibility = 'hidden';       
+    document.getElementsByName("add-to-cart")[0].style.visibility = 'hidden';    
+    document.getElementById('precioOtraVez').innerHTML = "";   
 }
 
 function jQueryDoSomethingAJAX() {
@@ -150,7 +151,7 @@ function jQueryDoSomethingAJAX() {
     document.getElementById('impuesto').value = document.getElementById('iva').value;
     //Calculo el precio del rótulo y lo envío al campo oculto en el formulario del carrito:
 
-    console.log("Ancho SVG Path A en cm: " + anchoSVG);
+    /*console.log("Ancho SVG Path A en cm: " + anchoSVG);
     console.log("Ancho SVG Path B en cm: " + anchoSVGCorreccion.toFixed(3));
     console.log("Ancho en cm: " + anchocm);
     console.log("Altura en cm: " + alturacm);
@@ -160,11 +161,11 @@ function jQueryDoSomethingAJAX() {
     console.log("Sujecion Neon: " + sujecionNeon);
     console.log("dimmerNeon: "+ dimmerNeon);
     console.log("Tiempo entrega: "+ tiemposEntrega);
-    console.log("Costo Transformador: "+ costoTransformador);
+    console.log("Costo Transformador: "+ costoTransformador);*/
 
 
 
-    console.log("-----------------------------------------------");
+    //console.log("-----------------------------------------------");
 
     traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
     sujecionNeon    = Number(sujecionNeon);
@@ -172,21 +173,24 @@ function jQueryDoSomethingAJAX() {
     tiemposEntrega  = Number(tiemposEntrega);
     tipoLetra       = (Number(anchoSVGCorreccion) / 100) * 7;
     
-    console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
+    /*console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
     console.log("Total sujecion Neon: " + sujecionNeon);
     console.log("Total dimmer Neon: " + dimmerNeon);
     console.log("Total tiempos de entrega: " + tiemposEntrega);
-    console.log("Tipo de letra: ("+anchoSVGCorreccion +"/100) x 7 = "+ tipoLetra.toFixed(3));
+    console.log("Tipo de letra: ("+anchoSVGCorreccion +"/100) x 7 = "+ tipoLetra.toFixed(3));*/
 
     //((Tipo de letra + trasera de neón + sujeción del neón + dimmer ) * 3) + tiempo de entrega
 
     subTotalprecio     = ((tipoLetra + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
 
+    //console.log("Sub total precio: "+ subTotalprecio);
     var iva = Number(document.getElementById('iva').value / 100);
 
-    precioFinal     = subTotalprecio;//(subTotalprecio * iva) + subTotalprecio;
+    //precioFinal     = subTotalprecio;//(subTotalprecio * iva) + subTotalprecio;
 
-    console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+" + "+costoTransformador+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(3));
+    precioFinal     = (subTotalprecio * iva) + subTotalprecio;
+
+    //console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+" + "+costoTransformador+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(3));
 
 
     if(document.getElementById("altura").value == 0){
@@ -253,6 +257,9 @@ function jQueryDoSomethingAJAX() {
         }
        
         document.getElementById('response').innerHTML = response;
+
+        document.getElementById('precioOtraVez').innerHTML = precioFinal.toFixed(2) + "&euro; <div style='font-size: 10px; color: #870D00'> IVA incluido</div><span>Envío Gratuito</span>";
+
 
         document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
         document.getElementById('subTotalPrecio').value          = subTotalprecio.toFixed(2);

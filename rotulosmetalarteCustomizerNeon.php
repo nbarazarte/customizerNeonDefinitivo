@@ -404,22 +404,28 @@ function campos_ocultos_customizerNeon() {
 
   ?>
 
-  <div class="bsnamespace"> 
+  <div class="bsnamespace" style=""> 
 
 
       <div class="col-12 text-center">
 
-      <!--
-        <button id="myButton" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn"> 
-          <i class="fas fa-magic"></i> 
-          Aplicar cambios
-        </button>
-       -->
+          <div class="fabify-button" style="cursor: pointer;">
 
-        <a id="myButton2" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
+            <a id="myButton2" style="color: #fff;" onclick="jQueryDoSomethingAJAX()">
+              <i class="fas fa-magic"></i> Aplicar cambios
+            </a>
+
+          </div>
+          <br/>
+          <div id="precioOtraVez" style="position: relative; left: 30px;">
+           
+          </div>
+          
+
+        <!--<a id="myButton2" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
           <i class="fas fa-magic"></i> 
           Aplicar cambios
-        </a>
+        </a>-->
 
         <div id="myDIV">
           <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
@@ -496,7 +502,8 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   
      
   //$cart_item_data['new_price'] = $price + $precio_final_rotulo;
-  $cart_item_data['new_price'] = $precio_final_rotulo;
+  //$cart_item_data['new_price'] = $precio_final_rotulo;
+  $cart_item_data['new_price'] = $subTotalPrecio;
   
   /*
   echo "-->".$precio_final_rotulo;

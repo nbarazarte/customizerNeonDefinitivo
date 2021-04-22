@@ -10142,12 +10142,16 @@
 	animation: neon6 1.5s ease-in-out infinite alternate;
 }
 
-.turquesa{
+.celeste{
 	animation: neon7 1.5s ease-in-out infinite alternate;
 }
 
 .fucsia{
 	animation: neon8 1.5s ease-in-out infinite alternate;
+}
+
+.blanco{
+  animation: neon9 1.5s ease-in-out infinite alternate;
 }
 
 /*
@@ -10218,54 +10222,258 @@
 
 @keyframes neon3 {/*Amarillo*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFF00, 0 0 35px #FFFF00, 0 0 40px #FFFF00, 0 0 50px #FFFF00, 0 0 75px #FFFF00;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFF08, 0 0 35px #FFFF08, 0 0 40px #FFFF08, 0 0 50px #FFFF08, 0 0 75px #FFFF08;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFF00, 0 0 9px #FFFF00, 0 0 15px #FFFF00, 0 0 20px #FFFF00, 0 0 25px #FFFF00;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFF08, 0 0 9px #FFFF08, 0 0 15px #FFFF08, 0 0 20px #FFFF08, 0 0 25px #FFFF08;
   }
 }
 
 @keyframes neon4 {/*Verde*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #008000, 0 0 35px #008000, 0 0 40px #008000, 0 0 50px #008000, 0 0 75px #008000;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #BDFF00, 0 0 35px #BDFF00, 0 0 40px #BDFF00, 0 0 50px #BDFF00, 0 0 75px #BDFF00;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #008000, 0 0 9px #008000, 0 0 15px #008000, 0 0 20px #008000, 0 0 25px #008000;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #BDFF00, 0 0 9px #BDFF00, 0 0 15px #BDFF00, 0 0 20px #BDFF00, 0 0 25px #BDFF00;
   }
 }
 
 @keyframes neon5 {/*Naranja*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFa500, 0 0 35px #FFa500, 0 0 40px #FFa500, 0 0 50px #FFa500, 0 0 75px #FFa500;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFD800, 0 0 35px #FFD800, 0 0 40px #FFD800, 0 0 50px #FFD800, 0 0 75px #FFD800;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFa500, 0 0 9px #FFa500, 0 0 15px #FFa500, 0 0 20px #FFa500, 0 0 25px #FFa500;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFD800, 0 0 9px #FFD800, 0 0 15px #FFD800, 0 0 20px #FFD800, 0 0 25px #FFD800;
   }	
 }
 
 @keyframes neon6 {/*Morado*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #800080, 0 0 35px #800080, 0 0 40px #800080, 0 0 50px #800080, 0 0 75px #800080;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF19FF, 0 0 35px #FF19FF, 0 0 40px #FF19FF, 0 0 50px #FF19FF, 0 0 75px #FF19FF;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #800080, 0 0 9px #800080, 0 0 15px #800080, 0 0 20px #800080, 0 0 25px #800080;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF19FF, 0 0 9px #FF19FF, 0 0 15px #FF19FF, 0 0 20px #FF19FF, 0 0 25px #FF19FF;
   }	
 }
 
-@keyframes neon7 {/*Turquesa*/
+@keyframes neon7 {/*Celeste*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #40e0d0, 0 0 35px #40e0d0, 0 0 40px #40e0d0, 0 0 50px #40e0d0, 0 0 75px #40e0d0;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00FFFF, 0 0 35px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 75px #00FFFF;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #40e0d0, 0 0 9px #40e0d0, 0 0 15px #40e0d0, 0 0 20px #40e0d0, 0 0 25px #40e0d0;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #00FFFF, 0 0 9px #00FFFF, 0 0 15px #00FFFF, 0 0 20px #00FFFF, 0 0 25px #00FFFF;
   }
 }
 
 @keyframes neon8 {/*Fucsia*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #e30052, 0 0 35px #e30052, 0 0 40px #e30052, 0 0 50px #e30052, 0 0 75px #e30052;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF00FF, 0 0 35px #FF00FF, 0 0 40px #FF00FF, 0 0 50px #FF00FF, 0 0 75px #FF00FF;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #e30052, 0 0 9px #e30052, 0 0 15px #e30052, 0 0 20px #e30052, 0 0 25px #e30052;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF00FF, 0 0 9px #FF00FF, 0 0 15px #FF00FF, 0 0 20px #FF00FF, 0 0 25px #FF00FF;
   }
+}
+
+@keyframes neon9 {/*blanco*/
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFFF, 0 0 9px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #FFFFFF, 0 0 25px #FFFFFF;
+  }
+}
+
+
+/*contorno*/
+.rectangular{
+  background-image: url("../imagenes/contorno/rectangular.png");
+}
+
+.redondo{
+  background-image: url("../imagenes/contorno/redondo.png");
+}
+
+.personalizado{
+  background-image: url("../imagenes/contorno/personalizado.png");
+}
+
+/*trasera*/
+.metacrilato{
+  background-image: url("../imagenes/trasera/metacrilato.png");
+}
+
+.pvc{
+  background-image: url("../imagenes/trasera/pvc.png");
+}
+
+.dm{
+  background-image: url("../imagenes/trasera/dm.png");
+}
+
+.contrachapado{
+  background-image: url("../imagenes/trasera/contrachapado.png");
+}
+
+.maderadepino{
+  background-image: url("../imagenes/trasera/maderadepino.png");
+}
+
+/*sujecion*/
+.ancladoalapared{
+  background-image: url("../imagenes/sujecion/ancladoalapared.png");
+}
+
+.colgadoaltecho{
+  background-image: url("../imagenes/sujecion/colgadoaltecho.png");
+}
+
+.colgadocomouncuadro{
+  background-image: url("../imagenes/sujecion/colgadocomouncuadro.png");
+}
+
+.sinsujecion{
+  background-image: url("../imagenes/sujecion/sinsujecion.png");
+}
+
+/*dimmer*/
+.condimmer{
+  background-image: url("../imagenes/dimmer/incluir.png");
+}
+
+.sindimmer{
+  background-image: url("../imagenes/dimmer/noincluir.png");
+}
+
+/*colores*/
+.amarilloColor{
+  background-image: url("../imagenes/colores/amarillo.png");
+}
+
+.azulColor{
+  background-image: url("../imagenes/colores/azul.png");
+}
+
+.verdeColor{
+  background-image: url("../imagenes/colores/verde.png");
+}
+
+.rojoColor{
+  background-image: url("../imagenes/colores/rojo.png");
+}
+
+.moradoColor{
+  background-image: url("../imagenes/colores/morado.png");
+}
+
+.celesteColor{
+  background-image: url("../imagenes/colores/celeste.png");
+}
+
+.naranjaColor{
+  background-image: url("../imagenes/colores/naranja.png");
+}
+
+.fucsiaColor{
+  background-image: url("../imagenes/colores/fucsia.png");
+}
+
+.blancoColor{
+  background-image: url("../imagenes/colores/blanco.png");
+}
+
+/*imagen radio button*/
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc,
+.cc-selector input:checked +.drinkcard-cc-colores{
+      
+      /*
+      -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+
+    width: 70px;
+    height: 90px;
+
+    */
+
+
+     -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+         
+         
+    -webkit-filter:  opacity(.4);
+       -moz-filter:  opacity(.4);
+            filter:  opacity(.4);    
+
+
+
+
+}
+.drinkcard-cc,
+.drinkcard-cc-colores{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:80px;height:90px;
+
+/*
+     -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+         
+         
+    -webkit-filter: brightness(1.8) grayscale(.5) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(.5) opacity(.7);
+            filter: brightness(1.8) grayscale(.5) opacity(.7);        
+
+*/
+
+            
+}
+
+
+
+.drinkcard-cc:hover{
+  
+  /*
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+
+
+    /*
+    width: 75px;
+    height: 75px;
+    */
+  
+}
+
+
+
+
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+
+
+label.c {
+
+  display: block;
+  width: 100px;
+  height: 5px;
+  padding: 5px;
+  font-size: 8px;
+  position: relative;    
 }
